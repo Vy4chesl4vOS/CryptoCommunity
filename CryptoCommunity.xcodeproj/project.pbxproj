@@ -7,18 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770296492801E03900CC39AD /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770296482801E03900CC39AD /* RegistrationView.swift */; };
+		7702964B2801E3B100CC39AD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702964A2801E3B100CC39AD /* MainTabView.swift */; };
+		7702964D2801E78100CC39AD /* ProfilePhotoSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702964C2801E78100CC39AD /* ProfilePhotoSelectView.swift */; };
+		770296512802BFE200CC39AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770296502802BFE200CC39AD /* ProfileView.swift */; };
+		773A740328036C830054FC30 /* PostRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A740228036C830054FC30 /* PostRowView.swift */; };
+		773A740528036E990054FC30 /* AllPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A740428036E990054FC30 /* AllPostsView.swift */; };
+		773A740828036FF90054FC30 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740728036FF90054FC30 /* FirebaseAuth */; };
+		773A740A28036FF90054FC30 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740928036FF90054FC30 /* FirebaseFirestore */; };
+		773A740C28036FF90054FC30 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740B28036FF90054FC30 /* FirebaseFirestoreSwift-Beta */; };
+		773A740E28036FF90054FC30 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740D28036FF90054FC30 /* FirebaseStorage */; };
+		773A7410280371380054FC30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 773A740F280371380054FC30 /* GoogleService-Info.plist */; };
+		773A7412280371680054FC30 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7411280371680054FC30 /* AuthViewModel.swift */; };
+		773A7416280453DD0054FC30 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7415280453DD0054FC30 /* ImagePicker.swift */; };
+		773A7419280458AE0054FC30 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7418280458AE0054FC30 /* UploadImage.swift */; };
+		773A741B28045F590054FC30 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A741A28045F590054FC30 /* UserService.swift */; };
+		773A741D280460820054FC30 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A741C280460820054FC30 /* User.swift */; };
+		773A741F28048C2D0054FC30 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A741E28048C2D0054FC30 /* NetworkManager.swift */; };
+		773A7421280491950054FC30 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7420280491950054FC30 /* Coin.swift */; };
+		773A742328049DCA0054FC30 /* AllCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A742228049DCA0054FC30 /* AllCurrencyViewModel.swift */; };
+		773A74262804B74F0054FC30 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 773A74252804B74F0054FC30 /* Kingfisher */; };
+		773A7429280580180054FC30 /* CryptoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7428280580170054FC30 /* CryptoDetailView.swift */; };
+		773A742C280581140054FC30 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 773A742B280581140054FC30 /* SwiftUICharts */; };
+		773C981E28060CB00044497B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C981D28060CB00044497B /* Double.swift */; };
 		7774746F2801CB8500C994EF /* CryptoCommunityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */; };
 		777474712801CB8500C994EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777474702801CB8500C994EF /* ContentView.swift */; };
 		777474732801CB8600C994EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777474722801CB8600C994EF /* Assets.xcassets */; };
 		777474762801CB8600C994EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777474752801CB8600C994EF /* Preview Assets.xcassets */; };
+		7774748C2801CC5300C994EF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7774748B2801CC5300C994EF /* LoginView.swift */; };
+		7774748E2801CC7B00C994EF /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7774748D2801CC7B00C994EF /* RoundedShape.swift */; };
+		777474912801D09E00C994EF /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777474902801D09E00C994EF /* TextFieldView.swift */; };
+		777474932801D5FE00C994EF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777474922801D5FE00C994EF /* HeaderView.swift */; };
+		77786A122802D67D00CC9C18 /* AllCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A112802D67D00CC9C18 /* AllCurrencyView.swift */; };
+		77786A142802D69B00CC9C18 /* CurrencyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A132802D69B00CC9C18 /* CurrencyRowView.swift */; };
+		77786A162802D9EC00CC9C18 /* FindSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A152802D9EC00CC9C18 /* FindSearchBarView.swift */; };
+		77786A1928034AA900CC9C18 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A1828034AA900CC9C18 /* UserRowView.swift */; };
+		77786A1E28034E7E00CC9C18 /* AllUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A1D28034E7E00CC9C18 /* AllUsersView.swift */; };
+		77786A2528034F6100CC9C18 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A2428034F6100CC9C18 /* NewPostView.swift */; };
+		77786A29280355E800CC9C18 /* TextAreaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A28280355E800CC9C18 /* TextAreaPost.swift */; };
+		77A8911B2806168A0099270A /* AllUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911A2806168A0099270A /* AllUsersViewModel.swift */; };
+		77A8911D2806B9D90099270A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911C2806B9D90099270A /* String.swift */; };
+		77A891202806CA250099270A /* CryptoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911F2806CA250099270A /* CryptoPickerView.swift */; };
+		77A891222806CBB10099270A /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A891212806CBB10099270A /* NewPostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770296482801E03900CC39AD /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		7702964A2801E3B100CC39AD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		7702964C2801E78100CC39AD /* ProfilePhotoSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectView.swift; sourceTree = "<group>"; };
+		770296502802BFE200CC39AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		773A740228036C830054FC30 /* PostRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowView.swift; sourceTree = "<group>"; };
+		773A740428036E990054FC30 /* AllPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsView.swift; sourceTree = "<group>"; };
+		773A740F280371380054FC30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		773A7411280371680054FC30 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		773A7415280453DD0054FC30 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		773A7418280458AE0054FC30 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
+		773A741A28045F590054FC30 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		773A741C280460820054FC30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		773A741E28048C2D0054FC30 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		773A7420280491950054FC30 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		773A742228049DCA0054FC30 /* AllCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCurrencyViewModel.swift; sourceTree = "<group>"; };
+		773A7428280580170054FC30 /* CryptoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailView.swift; sourceTree = "<group>"; };
+		773C981D28060CB00044497B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		7774746B2801CB8500C994EF /* CryptoCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCommunityApp.swift; sourceTree = "<group>"; };
 		777474702801CB8500C994EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		777474722801CB8600C994EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		777474752801CB8600C994EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7774748B2801CC5300C994EF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7774748D2801CC7B00C994EF /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
+		777474902801D09E00C994EF /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		777474922801D5FE00C994EF /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		77786A112802D67D00CC9C18 /* AllCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCurrencyView.swift; sourceTree = "<group>"; };
+		77786A132802D69B00CC9C18 /* CurrencyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRowView.swift; sourceTree = "<group>"; };
+		77786A152802D9EC00CC9C18 /* FindSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSearchBarView.swift; sourceTree = "<group>"; };
+		77786A1828034AA900CC9C18 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		77786A1D28034E7E00CC9C18 /* AllUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersView.swift; sourceTree = "<group>"; };
+		77786A2428034F6100CC9C18 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		77786A28280355E800CC9C18 /* TextAreaPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAreaPost.swift; sourceTree = "<group>"; };
+		77A8911A2806168A0099270A /* AllUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersViewModel.swift; sourceTree = "<group>"; };
+		77A8911C2806B9D90099270A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		77A8911F2806CA250099270A /* CryptoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPickerView.swift; sourceTree = "<group>"; };
+		77A891212806CBB10099270A /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +96,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773A740C28036FF90054FC30 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				773A740E28036FF90054FC30 /* FirebaseStorage in Frameworks */,
+				773A740828036FF90054FC30 /* FirebaseAuth in Frameworks */,
+				773A742C280581140054FC30 /* SwiftUICharts in Frameworks */,
+				773A740A28036FF90054FC30 /* FirebaseFirestore in Frameworks */,
+				773A74262804B74F0054FC30 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		773A7417280454590054FC30 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				773A7415280453DD0054FC30 /* ImagePicker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		773A742728057FFF0054FC30 /* CryptoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				773A742D2805813C0054FC30 /* View */,
+			);
+			path = CryptoDetail;
+			sourceTree = "<group>";
+		};
+		773A742D2805813C0054FC30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				773A7428280580170054FC30 /* CryptoDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		773C981C28060C4E0044497B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				773C981D28060CB00044497B /* Double.swift */,
+				77A8911C2806B9D90099270A /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		777474622801CB8500C994EF = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +160,15 @@
 		7774746D2801CB8500C994EF /* CryptoCommunity */ = {
 			isa = PBXGroup;
 			children = (
+				773C981C28060C4E0044497B /* Extensions */,
+				773A7417280454590054FC30 /* Utils */,
+				7774747E2801CBB300C994EF /* Model */,
+				7774747D2801CB9E00C994EF /* Service */,
+				7774747C2801CB9900C994EF /* Core */,
 				7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */,
 				777474702801CB8500C994EF /* ContentView.swift */,
 				777474722801CB8600C994EF /* Assets.xcassets */,
+				773A740F280371380054FC30 /* GoogleService-Info.plist */,
 				777474742801CB8600C994EF /* Preview Content */,
 			);
 			path = CryptoCommunity;
@@ -65,6 +180,247 @@
 				777474752801CB8600C994EF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7774747C2801CB9900C994EF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				773A742728057FFF0054FC30 /* CryptoDetail */,
+				777474832801CBE600C994EF /* Components */,
+				77786A2A28036BF800CC9C18 /* Posts */,
+				77786A2128034F4400CC9C18 /* NewPost */,
+				77786A1A28034C0300CC9C18 /* FindUsers */,
+				777474822801CBDD00C994EF /* Profile */,
+				777474812801CBD400C994EF /* AllCurrency */,
+				777474802801CBCD00C994EF /* Auth */,
+				7774747F2801CBC700C994EF /* MainTab */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7774747D2801CB9E00C994EF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				773A7418280458AE0054FC30 /* UploadImage.swift */,
+				773A741A28045F590054FC30 /* UserService.swift */,
+				773A741E28048C2D0054FC30 /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7774747E2801CBB300C994EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				773A741C280460820054FC30 /* User.swift */,
+				773A7420280491950054FC30 /* Coin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7774747F2801CBC700C994EF /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				7774748A2801CC1000C994EF /* View */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		777474802801CBCD00C994EF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				777474892801CC0900C994EF /* ViewModel */,
+				777474882801CC0400C994EF /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		777474812801CBD400C994EF /* AllCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				777474872801CBFF00C994EF /* ViewModel */,
+				777474862801CBFC00C994EF /* View */,
+			);
+			path = AllCurrency;
+			sourceTree = "<group>";
+		};
+		777474822801CBDD00C994EF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				777474852801CBF600C994EF /* ViewModel */,
+				777474842801CBF300C994EF /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		777474832801CBE600C994EF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				777474922801D5FE00C994EF /* HeaderView.swift */,
+				77786A132802D69B00CC9C18 /* CurrencyRowView.swift */,
+				77786A152802D9EC00CC9C18 /* FindSearchBarView.swift */,
+				77786A28280355E800CC9C18 /* TextAreaPost.swift */,
+				77786A1728034A8F00CC9C18 /* User */,
+				7774748F2801D08D00C994EF /* Auth */,
+				773A740228036C830054FC30 /* PostRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		777474842801CBF300C994EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				770296502802BFE200CC39AD /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		777474852801CBF600C994EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		777474862801CBFC00C994EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77786A112802D67D00CC9C18 /* AllCurrencyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		777474872801CBFF00C994EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				773A742228049DCA0054FC30 /* AllCurrencyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		777474882801CC0400C994EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7774748B2801CC5300C994EF /* LoginView.swift */,
+				770296482801E03900CC39AD /* RegistrationView.swift */,
+				7702964C2801E78100CC39AD /* ProfilePhotoSelectView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		777474892801CC0900C994EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				773A7411280371680054FC30 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7774748A2801CC1000C994EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7702964A2801E3B100CC39AD /* MainTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7774748F2801D08D00C994EF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7774748D2801CC7B00C994EF /* RoundedShape.swift */,
+				777474902801D09E00C994EF /* TextFieldView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		77786A1728034A8F00CC9C18 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				77786A1828034AA900CC9C18 /* UserRowView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		77786A1A28034C0300CC9C18 /* FindUsers */ = {
+			isa = PBXGroup;
+			children = (
+				77786A1C28034C1700CC9C18 /* ViewModel */,
+				77786A1B28034C1300CC9C18 /* View */,
+			);
+			path = FindUsers;
+			sourceTree = "<group>";
+		};
+		77786A1B28034C1300CC9C18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77786A1D28034E7E00CC9C18 /* AllUsersView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77786A1C28034C1700CC9C18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77A8911A2806168A0099270A /* AllUsersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77786A2128034F4400CC9C18 /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+				77A8911E2806CA040099270A /* CryptoPicker */,
+				77786A2328034F4F00CC9C18 /* ViewModel */,
+				77786A2228034F4A00CC9C18 /* View */,
+			);
+			path = NewPost;
+			sourceTree = "<group>";
+		};
+		77786A2228034F4A00CC9C18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77786A2428034F6100CC9C18 /* NewPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77786A2328034F4F00CC9C18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77A891212806CBB10099270A /* NewPostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77786A2A28036BF800CC9C18 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				77786A2C28036C1700CC9C18 /* ViewModel */,
+				77786A2B28036C0600CC9C18 /* View */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		77786A2B28036C0600CC9C18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				773A740428036E990054FC30 /* AllPostsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77786A2C28036C1700CC9C18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77A8911E2806CA040099270A /* CryptoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				77A8911F2806CA250099270A /* CryptoPickerView.swift */,
+			);
+			path = CryptoPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +439,14 @@
 			dependencies = (
 			);
 			name = CryptoCommunity;
+			packageProductDependencies = (
+				773A740728036FF90054FC30 /* FirebaseAuth */,
+				773A740928036FF90054FC30 /* FirebaseFirestore */,
+				773A740B28036FF90054FC30 /* FirebaseFirestoreSwift-Beta */,
+				773A740D28036FF90054FC30 /* FirebaseStorage */,
+				773A74252804B74F0054FC30 /* Kingfisher */,
+				773A742B280581140054FC30 /* SwiftUICharts */,
+			);
 			productName = CryptoCommunity;
 			productReference = 7774746B2801CB8500C994EF /* CryptoCommunity.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +475,11 @@
 				Base,
 			);
 			mainGroup = 777474622801CB8500C994EF;
+			packageReferences = (
+				773A740628036FF90054FC30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				773A74242804B74E0054FC30 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				773A742A280581140054FC30 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 7774746C2801CB8500C994EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +496,7 @@
 			files = (
 				777474762801CB8600C994EF /* Preview Assets.xcassets in Resources */,
 				777474732801CB8600C994EF /* Assets.xcassets in Resources */,
+				773A7410280371380054FC30 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +507,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773C981E28060CB00044497B /* Double.swift in Sources */,
+				773A7412280371680054FC30 /* AuthViewModel.swift in Sources */,
+				77786A1928034AA900CC9C18 /* UserRowView.swift in Sources */,
 				777474712801CB8500C994EF /* ContentView.swift in Sources */,
+				77A8911D2806B9D90099270A /* String.swift in Sources */,
+				773A7416280453DD0054FC30 /* ImagePicker.swift in Sources */,
+				77786A29280355E800CC9C18 /* TextAreaPost.swift in Sources */,
+				7702964D2801E78100CC39AD /* ProfilePhotoSelectView.swift in Sources */,
+				773A742328049DCA0054FC30 /* AllCurrencyViewModel.swift in Sources */,
+				77786A142802D69B00CC9C18 /* CurrencyRowView.swift in Sources */,
+				773A741B28045F590054FC30 /* UserService.swift in Sources */,
+				77A891202806CA250099270A /* CryptoPickerView.swift in Sources */,
+				773A7421280491950054FC30 /* Coin.swift in Sources */,
+				770296512802BFE200CC39AD /* ProfileView.swift in Sources */,
+				777474932801D5FE00C994EF /* HeaderView.swift in Sources */,
+				773A7429280580180054FC30 /* CryptoDetailView.swift in Sources */,
+				77786A122802D67D00CC9C18 /* AllCurrencyView.swift in Sources */,
+				77786A2528034F6100CC9C18 /* NewPostView.swift in Sources */,
+				777474912801D09E00C994EF /* TextFieldView.swift in Sources */,
+				77786A1E28034E7E00CC9C18 /* AllUsersView.swift in Sources */,
+				7702964B2801E3B100CC39AD /* MainTabView.swift in Sources */,
+				77A8911B2806168A0099270A /* AllUsersViewModel.swift in Sources */,
+				770296492801E03900CC39AD /* RegistrationView.swift in Sources */,
+				77A891222806CBB10099270A /* NewPostViewModel.swift in Sources */,
+				773A740528036E990054FC30 /* AllPostsView.swift in Sources */,
+				773A7419280458AE0054FC30 /* UploadImage.swift in Sources */,
 				7774746F2801CB8500C994EF /* CryptoCommunityApp.swift in Sources */,
+				7774748C2801CC5300C994EF /* LoginView.swift in Sources */,
+				773A741D280460820054FC30 /* User.swift in Sources */,
+				773A740328036C830054FC30 /* PostRowView.swift in Sources */,
+				773A741F28048C2D0054FC30 /* NetworkManager.swift in Sources */,
+				77786A162802D9EC00CC9C18 /* FindSearchBarView.swift in Sources */,
+				7774748E2801CC7B00C994EF /* RoundedShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +740,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		773A740628036FF90054FC30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		773A74242804B74E0054FC30 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		773A742A280581140054FC30 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		773A740728036FF90054FC30 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 773A740628036FF90054FC30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		773A740928036FF90054FC30 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 773A740628036FF90054FC30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		773A740B28036FF90054FC30 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 773A740628036FF90054FC30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		773A740D28036FF90054FC30 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 773A740628036FF90054FC30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		773A74252804B74F0054FC30 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 773A74242804B74E0054FC30 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		773A742B280581140054FC30 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 773A742A280581140054FC30 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 777474632801CB8500C994EF /* Project object */;
 }
