@@ -16,12 +16,14 @@ struct HeaderView: View {
             HStack {Spacer()}
             Text(title1)
                 .foregroundColor(.yellow)
-                .font(.system(size: 50))
+                .font(.system(size: 40))
                 .fontWeight(.heavy)
+                .lineLimit(1)
             Text(title2)
                 .foregroundColor(.white)
-                .font(.system(size: 32))
+                .font(.system(size: 28))
                 .fontWeight(.heavy)
+                .lineLimit(1)
         }
         .frame(height: 230)
         .padding(.horizontal, 50)

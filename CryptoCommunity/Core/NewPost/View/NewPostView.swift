@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct NewPostView: View {
-    @State private var text: String = ""
     @State private var showCryptoPicker = false
     
     @StateObject var viewModel = NewPostViewModel()
@@ -30,7 +29,7 @@ struct NewPostView: View {
                     .font(.body)
                     .fontWeight(.bold)
             }
-            TextAreaPost(text: $text, "Enter your text")
+            TextAreaPost(text: $viewModel.postText, "Enter your text")
                 .overlay (alignment: .bottom){
                     HStack {
                         Button {
@@ -46,7 +45,7 @@ struct NewPostView: View {
 
                         
                         Button {
-                            //post
+                            viewModel.uploadPost()
                         } label: {
                             Text("Upload")
                                 .foregroundColor(.white)
@@ -67,6 +66,11 @@ struct NewPostView: View {
         .sheet(isPresented: $showCryptoPicker, onDismiss: nil) {
             CryptoPickerView()
                 .environmentObject(viewModel)
+        }
+        .onReceive(viewModel.$didPostUpload) { success in
+            if success {
+                mod.wrappedValue.dismiss()
+            }
         }
         
     }

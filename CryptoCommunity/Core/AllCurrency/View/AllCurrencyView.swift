@@ -11,22 +11,22 @@ struct AllCurrencyView: View {
     @StateObject var viewModel = AllCurrencyViewModel()
     
     var body: some View {
-        VStack {
-            FindSearchBarView(text: $viewModel.searchText, placeholder: "Search crypto")
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.searchCoins) { coin in
-                        NavigationLink {
-                            CryptoDetailView(coin: coin)
-                        } label: {
-                            CurrencyRowView(coin: coin, index: Int(coin.marketCapRank ?? 0.0))
-                        }
+            VStack {
+                FindSearchBarView(text: $viewModel.searchText, placeholder: "Search crypto")
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.searchCoins) { coin in
+                            NavigationLink {
+                                CryptoDetailView(coin: coin)
+                            } label: {
+                                CurrencyRowView(coin: coin, index: Int(coin.marketCapRank ?? 0.0))
+                            }
 
+                        }
                     }
                 }
             }
-        }
-        .background(.gray.opacity(0.1))
+            .background(.gray.opacity(0.1))
     }
 }
 

@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct AllPostsView: View {
+    @StateObject var viewModel = AllPostsViewModel()
+    
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(0..<15) { _ in
-                    PostRowView()
+                ForEach(viewModel.posts) { post in
+                    NavigationLink {
+                        PostDetailView(post: post)
+                    } label: {
+                        PostRowView(post: post)
+                    }
+
                 }
             }
         }
+        .background(.gray.opacity(0.1))
     }
 }
 

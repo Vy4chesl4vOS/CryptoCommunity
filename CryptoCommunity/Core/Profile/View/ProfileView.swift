@@ -10,39 +10,72 @@ import Kingfisher
 
 struct ProfileView: View {
     @State private var likedChoose = true
+    @ObservedObject var viewModel: ProfileViewModel
     @Environment(\.presentationMode) var mod
     
     let user: User
+    
+    init (user: User) {
+        self.user = user
+        self.viewModel = ProfileViewModel(user: user)
+    }
+    
     var body: some View {
         VStack {
            headerView
-            HStack(spacing: 20) {
-                Button {
-                        self.likedChoose = true
-                } label: {
-                    Text("Liked")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .frame(width: 150)
-                        .padding(.vertical, 10)
-                        .background(likedChoose ? .blue : .gray)
-                        .clipShape(Capsule())
-                }
-                Button {
-                        self.likedChoose = false
-                    
-                } label: {
-                    Text("Posts")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .frame(width: 150)
-                        .padding(.vertical, 10)
-                        .background(likedChoose ? .gray : .blue)
-                        .clipShape(Capsule())
-                }
+            VStack {
+                HStack(spacing: 20) {
+                    Button {
+                            self.likedChoose = true
+                    } label: {
+                        Text("Liked")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            .frame(width: 150)
+                            .padding(.vertical, 10)
+                            .background(likedChoose ? .blue : .gray)
+                            .clipShape(Capsule())
+                    }
+                    Button {
+                            self.likedChoose = false
+                        
+                    } label: {
+                        Text("Posts")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            .frame(width: 150)
+                            .padding(.vertical, 10)
+                            .background(likedChoose ? .gray : .blue)
+                            .clipShape(Capsule())
+                    }
 
+                }
+                .padding([.bottom, .horizontal])
+                
+                        Button {
+                            mod.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "multiply")
+                                .foregroundColor(.white)
+                                .font(.title2)
+                                .padding()
+                                .background(.red.opacity(0.7))
+                                .clipShape(Circle())
+                        }
             }
-            .padding([.bottom, .horizontal])
+            
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.userPosts) { post in
+                        NavigationLink {
+                            PostDetailView(post: post)
+                        } label: {
+                            PostRowView(post: post)
+                        }
+
+                    }
+                }
+            }
             
             Spacer()
         }
@@ -63,23 +96,12 @@ struct ProfileView: View {
             .frame(height: 350)
                 
                 VStack {
-                    HStack(alignment: .center) {
-                        Button {
-                            mod.wrappedValue.dismiss()
-                        } label: {
-                            Image(systemName: "arrow.left")
-                                .font(.title2)
-                                .foregroundColor(.white)
-                        }
-
                         Text("PROFILE")
                             .foregroundColor(.white)
                             .fontWeight(.heavy)
                             .font(.largeTitle)
-                    }
-                    .padding(.top, 50)
-                    .padding(.trailing, 45)
-
+                            .padding(.top, 50)
+                    
                     KFImage(URL(string: user.imageUrl))
                         .resizable()
                         .scaledToFill()

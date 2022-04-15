@@ -6,43 +6,43 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PostRowView: View {
+    let post: Post
     var body: some View {
         VStack(alignment: .leading) {
             HStack() {
                 HStack() {
-                    Circle()
+                    KFImage(URL(string: post.user?.imageUrl ?? ""))
+                        .resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
                         .frame(width: 50, height: 50)
                 }
                 VStack(alignment: .leading ,spacing: 5) {
-                    Text("BTC")
+                    Text("\(post.coin)")
                         .fontWeight(.semibold)
                         .font(.title2)
-                    Text("From: Username")
+                        .foregroundColor(.black)
+                    Text("From: \(post.user?.username ?? "")")
                         .font(.subheadline)
                         .foregroundColor(.gray)
                 }
                 Spacer()
      
             }
+            .padding(.bottom, 15)
 
-            
-            Divider()
-                .foregroundColor(.blue)
-            Text("This may be go away and start withakmThis may be go away and start withakmThis may be go away and start withakm star 1000$  go awa  go awa v go awa go awa go awa")
+            Text("\(post.text)")
                 .foregroundColor(.gray)
                 .font(.caption)
-                .padding()
+                .multilineTextAlignment(.leading)
                 .lineLimit(3)
+            Divider()
+                .foregroundColor(.blue)
         }
-        .padding(.vertical)
-        .padding(.horizontal, 15)
+        .padding(20)
     }
 }
 
-struct PostRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostRowView()
-    }
-}

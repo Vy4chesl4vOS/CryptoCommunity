@@ -13,12 +13,12 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
             VStack {
-                    HeaderView(title1: "CryptoCom", title2: "Welcome.")
-                    mainView
+                        HeaderView(title1: "CryptoCom", title2: "Welcome.")
+                        mainView
 
-            }
-            .ignoresSafeArea()
-        .background(.gray.opacity(0.1))
+                }
+                .ignoresSafeArea()
+            .background(.gray.opacity(0.1))
     }
     
     private var mainView: some View {
@@ -57,6 +57,7 @@ struct LoginView: View {
 
             NavigationLink {
                 RegistrationView()
+                    .navigationBarHidden(true)
             } label: {
                 Text("Haven't account? Sign up now")
                     .font(.caption)

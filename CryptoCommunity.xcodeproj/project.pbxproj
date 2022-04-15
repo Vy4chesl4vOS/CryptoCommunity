@@ -11,6 +11,10 @@
 		7702964B2801E3B100CC39AD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702964A2801E3B100CC39AD /* MainTabView.swift */; };
 		7702964D2801E78100CC39AD /* ProfilePhotoSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702964C2801E78100CC39AD /* ProfilePhotoSelectView.swift */; };
 		770296512802BFE200CC39AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770296502802BFE200CC39AD /* ProfileView.swift */; };
+		7716791328088C940059711E /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716791228088C940059711E /* PostDetailViewModel.swift */; };
+		771679152809D25C0059711E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771679142809D25C0059711E /* ProfileViewModel.swift */; };
+		772DE89C280817AC004EF3B3 /* AllPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DE89B280817AC004EF3B3 /* AllPostsViewModel.swift */; };
+		772DE89E28083B1D004EF3B3 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DE89D28083B1C004EF3B3 /* PostDetailView.swift */; };
 		773A740328036C830054FC30 /* PostRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A740228036C830054FC30 /* PostRowView.swift */; };
 		773A740528036E990054FC30 /* AllPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A740428036E990054FC30 /* AllPostsView.swift */; };
 		773A740828036FF90054FC30 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740728036FF90054FC30 /* FirebaseAuth */; };
@@ -49,6 +53,8 @@
 		77A8911D2806B9D90099270A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911C2806B9D90099270A /* String.swift */; };
 		77A891202806CA250099270A /* CryptoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911F2806CA250099270A /* CryptoPickerView.swift */; };
 		77A891222806CBB10099270A /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A891212806CBB10099270A /* NewPostViewModel.swift */; };
+		77A891242806F84F0099270A /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A891232806F84E0099270A /* PostService.swift */; };
+		77A891262806F8A90099270A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A891252806F8A90099270A /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,10 @@
 		7702964A2801E3B100CC39AD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7702964C2801E78100CC39AD /* ProfilePhotoSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectView.swift; sourceTree = "<group>"; };
 		770296502802BFE200CC39AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		7716791228088C940059711E /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		771679142809D25C0059711E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		772DE89B280817AC004EF3B3 /* AllPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsViewModel.swift; sourceTree = "<group>"; };
+		772DE89D28083B1C004EF3B3 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		773A740228036C830054FC30 /* PostRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowView.swift; sourceTree = "<group>"; };
 		773A740428036E990054FC30 /* AllPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsView.swift; sourceTree = "<group>"; };
 		773A740F280371380054FC30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -89,6 +99,8 @@
 		77A8911C2806B9D90099270A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		77A8911F2806CA250099270A /* CryptoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPickerView.swift; sourceTree = "<group>"; };
 		77A891212806CBB10099270A /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
+		77A891232806F84E0099270A /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		77A891252806F8A90099270A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772DE8A028083B4B004EF3B3 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				772DE8A228088A71004EF3B3 /* ViewModel */,
+				772DE8A128083B55004EF3B3 /* View */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		772DE8A128083B55004EF3B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				772DE89D28083B1C004EF3B3 /* PostDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		772DE8A228088A71004EF3B3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7716791228088C940059711E /* PostDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		773A7417280454590054FC30 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +222,7 @@
 		7774747C2801CB9900C994EF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				772DE8A028083B4B004EF3B3 /* PostDetail */,
 				773A742728057FFF0054FC30 /* CryptoDetail */,
 				777474832801CBE600C994EF /* Components */,
 				77786A2A28036BF800CC9C18 /* Posts */,
@@ -204,6 +242,7 @@
 				773A7418280458AE0054FC30 /* UploadImage.swift */,
 				773A741A28045F590054FC30 /* UserService.swift */,
 				773A741E28048C2D0054FC30 /* NetworkManager.swift */,
+				77A891232806F84E0099270A /* PostService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -213,6 +252,7 @@
 			children = (
 				773A741C280460820054FC30 /* User.swift */,
 				773A7420280491950054FC30 /* Coin.swift */,
+				77A891252806F8A90099270A /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +317,7 @@
 		777474852801CBF600C994EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				771679142809D25C0059711E /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -411,6 +452,7 @@
 		77786A2C28036C1700CC9C18 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				772DE89B280817AC004EF3B3 /* AllPostsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -511,12 +553,14 @@
 				773A7412280371680054FC30 /* AuthViewModel.swift in Sources */,
 				77786A1928034AA900CC9C18 /* UserRowView.swift in Sources */,
 				777474712801CB8500C994EF /* ContentView.swift in Sources */,
+				772DE89C280817AC004EF3B3 /* AllPostsViewModel.swift in Sources */,
 				77A8911D2806B9D90099270A /* String.swift in Sources */,
 				773A7416280453DD0054FC30 /* ImagePicker.swift in Sources */,
 				77786A29280355E800CC9C18 /* TextAreaPost.swift in Sources */,
 				7702964D2801E78100CC39AD /* ProfilePhotoSelectView.swift in Sources */,
 				773A742328049DCA0054FC30 /* AllCurrencyViewModel.swift in Sources */,
 				77786A142802D69B00CC9C18 /* CurrencyRowView.swift in Sources */,
+				772DE89E28083B1D004EF3B3 /* PostDetailView.swift in Sources */,
 				773A741B28045F590054FC30 /* UserService.swift in Sources */,
 				77A891202806CA250099270A /* CryptoPickerView.swift in Sources */,
 				773A7421280491950054FC30 /* Coin.swift in Sources */,
@@ -526,18 +570,22 @@
 				77786A122802D67D00CC9C18 /* AllCurrencyView.swift in Sources */,
 				77786A2528034F6100CC9C18 /* NewPostView.swift in Sources */,
 				777474912801D09E00C994EF /* TextFieldView.swift in Sources */,
+				77A891262806F8A90099270A /* Post.swift in Sources */,
 				77786A1E28034E7E00CC9C18 /* AllUsersView.swift in Sources */,
 				7702964B2801E3B100CC39AD /* MainTabView.swift in Sources */,
 				77A8911B2806168A0099270A /* AllUsersViewModel.swift in Sources */,
 				770296492801E03900CC39AD /* RegistrationView.swift in Sources */,
 				77A891222806CBB10099270A /* NewPostViewModel.swift in Sources */,
 				773A740528036E990054FC30 /* AllPostsView.swift in Sources */,
+				77A891242806F84F0099270A /* PostService.swift in Sources */,
 				773A7419280458AE0054FC30 /* UploadImage.swift in Sources */,
 				7774746F2801CB8500C994EF /* CryptoCommunityApp.swift in Sources */,
 				7774748C2801CC5300C994EF /* LoginView.swift in Sources */,
 				773A741D280460820054FC30 /* User.swift in Sources */,
+				7716791328088C940059711E /* PostDetailViewModel.swift in Sources */,
 				773A740328036C830054FC30 /* PostRowView.swift in Sources */,
 				773A741F28048C2D0054FC30 /* NetworkManager.swift in Sources */,
+				771679152809D25C0059711E /* ProfileViewModel.swift in Sources */,
 				77786A162802D9EC00CC9C18 /* FindSearchBarView.swift in Sources */,
 				7774748E2801CC7B00C994EF /* RoundedShape.swift in Sources */,
 			);
