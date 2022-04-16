@@ -21,7 +21,7 @@ struct PostRowView: View {
                         .frame(width: 50, height: 50)
                 }
                 VStack(alignment: .leading ,spacing: 5) {
-                    Text("\(post.coin)")
+                    Text("\(post.coinName)")
                         .fontWeight(.semibold)
                         .font(.title2)
                         .foregroundColor(.black)

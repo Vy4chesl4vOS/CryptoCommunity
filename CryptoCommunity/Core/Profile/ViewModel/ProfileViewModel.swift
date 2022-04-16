@@ -10,13 +10,16 @@ import SwiftUI
 
 class ProfileViewModel : ObservableObject {
     @Published var userPosts = [Post]()
+    @Published var likedCoins = [LikedCoin]()
     
     let service = PostsService()
+    let userService = UserService()
     let user: User
     
     init(user: User) {
         self.user = user
         self.fetchUserPosts()
+        self.fetchLikedCoins()
     }
     
     func fetchUserPosts () {
@@ -27,6 +30,13 @@ class ProfileViewModel : ObservableObject {
             for i in 0..<posts.count {
                 self.userPosts[i].user = self.user
             }
+        }
+    }
+    
+    func fetchLikedCoins () {
+        guard let uid = user.id else { return }
+        userService.fetchCoinLikes(uid: uid) { coins in
+            self.likedCoins = coins
         }
     }
     

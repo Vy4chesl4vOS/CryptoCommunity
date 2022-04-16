@@ -31,11 +31,11 @@ class NewPostViewModel: ObservableObject {
     func uploadPost() {
         guard let pickedCoin = pickedCoin else { return }
         if !postText.isEmpty && postText.count > 40 {
-            postService.publishPost(coin: pickedCoin.name, text: postText) { complete in
-                    self.didPostUpload = true
-                    self.updatePostsCount()
-                    print("Post uploaded")
-                }
+            postService.publishPost(coinName: pickedCoin.name, coinImage: pickedCoin.image, coinSymbol: pickedCoin.symbol, coinPrice: pickedCoin.currentPrice.convertCurrency(), text: postText) { complete in
+                self.didPostUpload = true
+                self.updatePostsCount()
+                print("Post uploaded")
+            }
         }
     }
     

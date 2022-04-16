@@ -13,10 +13,6 @@ struct MainTabView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
     
-    init () {
-        UITabBar.appearance().isHidden = true
-    }
-    
     var body: some View {
         
         VStack(spacing: 0) {
@@ -70,7 +66,9 @@ struct MainTabView: View {
             
 
         }
+        .navigationBarTitle("CryptoCom")
     }
+        
     
     
     @ViewBuilder

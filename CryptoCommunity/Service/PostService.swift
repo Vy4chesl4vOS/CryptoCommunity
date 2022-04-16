@@ -12,9 +12,9 @@ struct PostsService {
     let service = UserService()
     var currentUser: User?
     
-    func publishPost(coin: String, text: String, completion: @escaping(Bool) -> Void) {
+    func publishPost(coinName: String, coinImage: String, coinSymbol: String, coinPrice: String, text: String, completion: @escaping(Bool) -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let data = ["coin": coin, "text": text, "uid": uid] as [String : Any]
+        let data = ["coinName": coinName, "coinImage" : coinImage, "coinSymbol": coinSymbol, "coinPrice": coinPrice, "text": text, "uid": uid] as [String : Any]
         Firebase.Firestore.firestore().collection("posts").document().setData(data) { error in
             if let error = error {
                 print("Error upload post \(error)")

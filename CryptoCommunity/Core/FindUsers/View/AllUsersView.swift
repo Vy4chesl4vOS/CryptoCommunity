@@ -18,7 +18,7 @@ struct AllUsersView: View {
                         ForEach(viewModel.searchUsers) { user in
                             NavigationLink {
                                 ProfileView(user: user)
-                                    .navigationBarBackButtonHidden(true)
+
                             } label: {
                                 UserRowView(user: user)
                             }

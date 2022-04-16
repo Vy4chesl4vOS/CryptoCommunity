@@ -13,6 +13,7 @@
 		770296512802BFE200CC39AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770296502802BFE200CC39AD /* ProfileView.swift */; };
 		7716791328088C940059711E /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716791228088C940059711E /* PostDetailViewModel.swift */; };
 		771679152809D25C0059711E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771679142809D25C0059711E /* ProfileViewModel.swift */; };
+		771679172809EEA00059711E /* CurrencyPostRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771679162809EEA00059711E /* CurrencyPostRowView.swift */; };
 		772DE89C280817AC004EF3B3 /* AllPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DE89B280817AC004EF3B3 /* AllPostsViewModel.swift */; };
 		772DE89E28083B1D004EF3B3 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DE89D28083B1C004EF3B3 /* PostDetailView.swift */; };
 		773A740328036C830054FC30 /* PostRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A740228036C830054FC30 /* PostRowView.swift */; };
@@ -49,6 +50,8 @@
 		77786A1E28034E7E00CC9C18 /* AllUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A1D28034E7E00CC9C18 /* AllUsersView.swift */; };
 		77786A2528034F6100CC9C18 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A2428034F6100CC9C18 /* NewPostView.swift */; };
 		77786A29280355E800CC9C18 /* TextAreaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A28280355E800CC9C18 /* TextAreaPost.swift */; };
+		77908AE9280ADED400122517 /* LikedCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77908AE8280ADED400122517 /* LikedCoin.swift */; };
+		77908AEB280AE04F00122517 /* CryptoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77908AEA280AE04F00122517 /* CryptoDetailViewModel.swift */; };
 		77A8911B2806168A0099270A /* AllUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911A2806168A0099270A /* AllUsersViewModel.swift */; };
 		77A8911D2806B9D90099270A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911C2806B9D90099270A /* String.swift */; };
 		77A891202806CA250099270A /* CryptoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911F2806CA250099270A /* CryptoPickerView.swift */; };
@@ -64,6 +67,7 @@
 		770296502802BFE200CC39AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7716791228088C940059711E /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		771679142809D25C0059711E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		771679162809EEA00059711E /* CurrencyPostRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPostRowView.swift; sourceTree = "<group>"; };
 		772DE89B280817AC004EF3B3 /* AllPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsViewModel.swift; sourceTree = "<group>"; };
 		772DE89D28083B1C004EF3B3 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		773A740228036C830054FC30 /* PostRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		77786A1D28034E7E00CC9C18 /* AllUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersView.swift; sourceTree = "<group>"; };
 		77786A2428034F6100CC9C18 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		77786A28280355E800CC9C18 /* TextAreaPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAreaPost.swift; sourceTree = "<group>"; };
+		77908AE8280ADED400122517 /* LikedCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCoin.swift; sourceTree = "<group>"; };
+		77908AEA280AE04F00122517 /* CryptoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewModel.swift; sourceTree = "<group>"; };
 		77A8911A2806168A0099270A /* AllUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersViewModel.swift; sourceTree = "<group>"; };
 		77A8911C2806B9D90099270A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		77A8911F2806CA250099270A /* CryptoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPickerView.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 		773A742728057FFF0054FC30 /* CryptoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				77908AEC280AE05500122517 /* ViewModel */,
 				773A742D2805813C0054FC30 /* View */,
 			);
 			path = CryptoDetail;
@@ -222,9 +229,9 @@
 		7774747C2801CB9900C994EF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				777474832801CBE600C994EF /* Components */,
 				772DE8A028083B4B004EF3B3 /* PostDetail */,
 				773A742728057FFF0054FC30 /* CryptoDetail */,
-				777474832801CBE600C994EF /* Components */,
 				77786A2A28036BF800CC9C18 /* Posts */,
 				77786A2128034F4400CC9C18 /* NewPost */,
 				77786A1A28034C0300CC9C18 /* FindUsers */,
@@ -253,6 +260,7 @@
 				773A741C280460820054FC30 /* User.swift */,
 				773A7420280491950054FC30 /* Coin.swift */,
 				77A891252806F8A90099270A /* Post.swift */,
+				77908AE8280ADED400122517 /* LikedCoin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 				77786A1728034A8F00CC9C18 /* User */,
 				7774748F2801D08D00C994EF /* Auth */,
 				773A740228036C830054FC30 /* PostRowView.swift */,
+				771679162809EEA00059711E /* CurrencyPostRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -457,6 +466,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		77908AEC280AE05500122517 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77908AEA280AE04F00122517 /* CryptoDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		77A8911E2806CA040099270A /* CryptoPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +574,8 @@
 				77A8911D2806B9D90099270A /* String.swift in Sources */,
 				773A7416280453DD0054FC30 /* ImagePicker.swift in Sources */,
 				77786A29280355E800CC9C18 /* TextAreaPost.swift in Sources */,
+				77908AE9280ADED400122517 /* LikedCoin.swift in Sources */,
+				771679172809EEA00059711E /* CurrencyPostRowView.swift in Sources */,
 				7702964D2801E78100CC39AD /* ProfilePhotoSelectView.swift in Sources */,
 				773A742328049DCA0054FC30 /* AllCurrencyViewModel.swift in Sources */,
 				77786A142802D69B00CC9C18 /* CurrencyRowView.swift in Sources */,
@@ -585,6 +604,7 @@
 				7716791328088C940059711E /* PostDetailViewModel.swift in Sources */,
 				773A740328036C830054FC30 /* PostRowView.swift in Sources */,
 				773A741F28048C2D0054FC30 /* NetworkManager.swift in Sources */,
+				77908AEB280AE04F00122517 /* CryptoDetailViewModel.swift in Sources */,
 				771679152809D25C0059711E /* ProfileViewModel.swift in Sources */,
 				77786A162802D9EC00CC9C18 /* FindSearchBarView.swift in Sources */,
 				7774748E2801CC7B00C994EF /* RoundedShape.swift in Sources */,

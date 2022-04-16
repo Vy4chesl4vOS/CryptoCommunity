@@ -10,7 +10,8 @@ import Foundation
 class AllCurrencyViewModel : ObservableObject {
     @Published var coins = [Coin]()
     @Published var searchText = ""
-
+    
+    
     var searchCoins: [Coin] {
         if searchText.isEmpty {
             return coins

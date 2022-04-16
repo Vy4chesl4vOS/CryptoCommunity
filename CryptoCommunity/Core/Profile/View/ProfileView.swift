@@ -52,35 +52,50 @@ struct ProfileView: View {
                 }
                 .padding([.bottom, .horizontal])
                 
-                        Button {
-                            mod.wrappedValue.dismiss()
-                        } label: {
-                            Image(systemName: "multiply")
-                                .foregroundColor(.white)
-                                .font(.title2)
-                                .padding()
-                                .background(.red.opacity(0.7))
-                                .clipShape(Circle())
-                        }
+                       
             }
             
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.userPosts) { post in
-                        NavigationLink {
-                            PostDetailView(post: post)
-                        } label: {
-                            PostRowView(post: post)
+            if likedChoose {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.likedCoins) { coin in
+                            CurrencyPostRowView(coinImage: coin.coinImage, coinSymbol: coin.coinSymbol, coinName: coin.coinName, coinPrice: nil)
                         }
-
                     }
+                    Spacer()
+                }
+            } else {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.userPosts) { post in
+                            NavigationLink {
+                                PostDetailView(post: post)
+                            } label: {
+                                PostRowView(post: post)
+                            }
+
+                        }
+                    }
+                    Spacer()
                 }
             }
             
-            Spacer()
         }
         .ignoresSafeArea()
         .background(.gray.opacity(0.2))
+        .overlay(alignment: .bottom) {
+            Button {
+                mod.wrappedValue.dismiss()
+            } label: {
+                Image(systemName: "multiply")
+                    .foregroundColor(.white)
+                    .font(.title2)
+                    .padding()
+                    .background(.red.opacity(0.7))
+                    .clipShape(Circle())
+            }
+            .padding(.bottom, 10)
+        }
     }
     
     private var headerView : some View {

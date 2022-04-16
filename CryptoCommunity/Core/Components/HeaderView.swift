@@ -23,7 +23,6 @@ struct HeaderView: View {
                 .foregroundColor(.white)
                 .font(.system(size: 28))
                 .fontWeight(.heavy)
-                .lineLimit(1)
         }
         .frame(height: 230)
         .padding(.horizontal, 50)

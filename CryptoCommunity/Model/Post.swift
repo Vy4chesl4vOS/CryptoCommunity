@@ -11,7 +11,10 @@ import FirebaseFirestoreSwift
 struct Post: Identifiable, Decodable {
     @DocumentID var id: String?
     let text: String
-    let coin: String
+    let coinName: String
+    let coinSymbol: String
+    let coinImage: String
+    let coinPrice: String
     let uid: String
     
     var user: User?

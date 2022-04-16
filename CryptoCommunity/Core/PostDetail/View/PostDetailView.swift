@@ -9,18 +9,18 @@ import SwiftUI
 
 struct PostDetailView: View {
     @Environment(\.presentationMode) var mod
-    @ObservedObject var viewModel: PostDetailViewModel
+//    @ObservedObject var viewModel: PostDetailViewModel
     let post: Post
     
     init (post: Post) {
         self.post = post
-        self.viewModel = PostDetailViewModel(coinName: post.coin)
+//        self.viewModel = PostDetailViewModel(coinName: post.coin)
     }
     
     var body: some View {
         VStack {
-            HeaderView(title1: post.coin, title2: "@\(post.user?.username ?? "")")
-            CurrencyRowView(coin: viewModel.coin, index: Int(viewModel.coin.marketCapRank ?? 0.0))
+            HeaderView(title1: post.coinName, title2: "@\(post.user?.username ?? "")")
+            CurrencyPostRowView(coinImage: post.coinImage, coinSymbol: post.coinSymbol, coinName: post.coinName, coinPrice: post.coinPrice)
             ScrollView {
                 Text(post.text)
                     .padding()

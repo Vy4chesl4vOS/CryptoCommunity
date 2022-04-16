@@ -9,14 +9,20 @@ import SwiftUI
 import SwiftUICharts
 
 struct CryptoDetailView: View {
+    @ObservedObject var viewModel: CryptoDetailViewModel
     
     let coin: Coin
     let chartsStyle = ChartStyle(backgroundColor: .gray.opacity(0.001), accentColor: .yellow, gradientColor: GradientColor(start: Colors.GradientUpperBlue, end: Colors.OrangeEnd), textColor: Color.black, legendTextColor: Color.black, dropShadowColor: .yellow)
     
+    init(coin: Coin) {
+        self.coin = coin
+        self.viewModel = CryptoDetailViewModel(coinSymbol: coin.symbol)
+    }
+    
     var body: some View {
         VStack {
             VStack {
-                Text("\((coin.currentPrice).convert())$")
+                Text("\(coin.currentPrice.convertCurrency())")
                     .foregroundColor(.black)
                     .fontWeight(.heavy)
                     .font(.title)
@@ -41,14 +47,23 @@ struct CryptoDetailView: View {
                     Divider()
                         .padding()
                     ScrollView {
-                        VStack(spacing: 20) {
-                            infoString(titleText: "Market capitalization", infoText: "\(Int(coin.marketCap ?? 0.0))$", color: .black)
+                        LazyVStack(spacing: 20) {
+                            infoString(titleText: "Market capitalization", infoText: "\((coin.marketCap ?? 0.0).convertCurrency())", color: .black)
                             
-                            infoString(titleText: "Hight 24H", infoText: "\((coin.high24H ?? 0.0).convert())$", color: .black)
+                            infoString(titleText: "Hight 24H", infoText: "\((coin.high24H ?? 0.0).convertCurrency())", color: .black)
                             
-                            infoString(titleText: "Low 24H", infoText: "\((coin.low24H ?? 0.0).convert())$", color: .black)
+                            infoString(titleText: "Low 24H", infoText: "\((coin.low24H ?? 0.0).convertCurrency())", color: .black)
                             
-                            infoString(titleText: "Change 24H", infoText: "\((coin.priceChange24H ?? 0.0).convert())$", color: String(coin.priceChange24H ?? 0.0).contains("-") ? .red : .green)
+                            infoString(titleText: "Change 24H", infoText: "\((coin.priceChange24H ?? 0.0).convertCurrency())", color: String(coin.priceChange24H ?? 0.0).contains("-") ? .red : .green)
+                            
+                            Button {
+                                viewModel.didCoinLiked ? viewModel.unlikeCoin(coinSymbol: coin.symbol) : viewModel.likeCoin(coinName: coin.name, coinSymbol: coin.symbol, coinImage: coin.image)
+                            } label: {
+                                Image(systemName: "suit.heart.fill")
+                                    .font(.largeTitle)
+                                    .foregroundColor(viewModel.didCoinLiked ? .red : .gray)
+                            }
+
                         }
                     }
                 }
@@ -77,6 +92,7 @@ struct infoString: View {
                 .font(.body)
                 .fontWeight(.bold)
                 .foregroundColor(color)
+                .multilineTextAlignment(.trailing)
         }
         .padding(.horizontal, 20)
     }

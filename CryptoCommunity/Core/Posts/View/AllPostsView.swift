@@ -11,15 +11,19 @@ struct AllPostsView: View {
     @StateObject var viewModel = AllPostsViewModel()
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(viewModel.posts) { post in
-                    NavigationLink {
-                        PostDetailView(post: post)
-                    } label: {
-                        PostRowView(post: post)
-                    }
+        VStack {
+            FindSearchBarView(text: $viewModel.searchText, placeholder: "Search post")
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.searchPosts) { post in
+                        NavigationLink {
+                            PostDetailView(post: post)
+                                .navigationBarBackButtonHidden(true)
+                        } label: {
+                            PostRowView(post: post)
+                        }
 
+                    }
                 }
             }
         }

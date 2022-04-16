@@ -1,27 +1,23 @@
 //
-//  CurrencyRowView.swift
+//  CurrencyPostRowView.swift
 //  CryptoCommunity
 //
-//  Created by Вячеслав Утешев on 10.04.2022.
+//  Created by Вячеслав Утешев on 15.04.2022.
 //
 
 import SwiftUI
 import Kingfisher
 
-struct CurrencyRowView: View {
-    let coin: Coin
-    let index: Int
+struct CurrencyPostRowView: View {
+    let coinImage: String
+    let coinSymbol: String
+    let coinName: String
+    let coinPrice: String?
     
-    init(coin: Coin, index: Int) {
-        self.coin = coin
-        self.index = index
-    }
     var body: some View {
         HStack() {
             HStack() {
-                Text("\(index)")
-                    .foregroundColor(.gray)
-                KFImage(URL(string: coin.image))
+                KFImage(URL(string: coinImage))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 50, height: 50)
@@ -29,19 +25,21 @@ struct CurrencyRowView: View {
 
             }
             VStack(alignment: .leading ,spacing: 5) {
-                Text(coin.name)
+                Text(coinName)
                     .fontWeight(.semibold)
                     .font(.title2)
                     .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
-                Text(coin.symbol.uppercased())
+                Text(coinSymbol.uppercased())
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
             Spacer()
-            Text("\(coin.currentPrice.convertCurrency())")
-                .foregroundColor(.green)
-                .fontWeight(.medium)
+            if let coinPrice = coinPrice {
+                Text("\(coinPrice)$")
+                    .foregroundColor(.green)
+                    .fontWeight(.medium)
+            }
         }
         .padding(.vertical)
         .padding(.horizontal, 15)

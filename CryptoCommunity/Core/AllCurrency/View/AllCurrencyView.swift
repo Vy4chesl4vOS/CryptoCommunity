@@ -16,7 +16,7 @@ struct AllCurrencyView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(viewModel.searchCoins) { coin in
-                            NavigationLink {
+                            NavigationLink { 
                                 CryptoDetailView(coin: coin)
                             } label: {
                                 CurrencyRowView(coin: coin, index: Int(coin.marketCapRank ?? 0.0))
@@ -27,6 +27,9 @@ struct AllCurrencyView: View {
                 }
             }
             .background(.gray.opacity(0.1))
+            .onAppear {
+                viewModel.fetchCrypto()
+            }
     }
 }
 
