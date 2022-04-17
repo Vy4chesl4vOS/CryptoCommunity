@@ -9,7 +9,10 @@ import SwiftUI
 import Kingfisher
 
 struct PostRowView: View {
+    @State private var showComments = false
+    
     let post: Post
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack() {
@@ -39,10 +42,26 @@ struct PostRowView: View {
                 .font(.caption)
                 .multilineTextAlignment(.leading)
                 .lineLimit(3)
-            Divider()
-                .foregroundColor(.blue)
+
+            VStack {
+                Button {
+                    showComments.toggle()
+                } label: {
+                    Text("Comments")
+                        .foregroundColor(.blue)
+                        .font(.caption)
+                }
+                .padding(5)
+                Capsule()
+                    .foregroundColor(.blue.opacity(0.5))
+                    .frame(width: UIScreen.main.bounds.width - 60, height: 2)
+            }
+
         }
         .padding(20)
+        .sheet(isPresented: $showComments) {
+            CommentsView(post: post)
+        }
     }
 }
 

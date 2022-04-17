@@ -73,7 +73,6 @@ struct CryptoDetailView: View {
         .background(.gray.opacity(0.1))
         .navigationTitle("\(coin.name)(\(coin.symbol.uppercased()))")
 
-
     }
 }
 

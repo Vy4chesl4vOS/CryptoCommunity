@@ -36,7 +36,7 @@ struct CurrencyPostRowView: View {
             }
             Spacer()
             if let coinPrice = coinPrice {
-                Text("\(coinPrice)$")
+                Text("\(coinPrice)")
                     .foregroundColor(.green)
                     .fontWeight(.medium)
             }

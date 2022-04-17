@@ -28,6 +28,9 @@ struct AllPostsView: View {
             }
         }
         .background(.gray.opacity(0.1))
+        .onAppear {
+            viewModel.fetchPosts()
+        }
     }
 }
 

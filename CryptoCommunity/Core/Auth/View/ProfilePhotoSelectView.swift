@@ -42,13 +42,13 @@ struct ProfilePhotoSelectView: View {
                         viewModel.uploadImageData(image: selectedImage)
                     } label: {
                         Text("Continue")
-                            .font(.body)
                             .foregroundColor(.white)
                             .fontWeight(.bold)
+                            .padding(.vertical, 16)
+                            .padding(.horizontal, 100)
+                            .background(.blue)
+                            .cornerRadius(30)
                     }
-                    .frame(width: 300, height: 50)
-                    .background(.blue)
-                    .clipShape(Capsule())
                     .padding()
 
                 } else {

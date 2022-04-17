@@ -11,7 +11,6 @@
 		7702964B2801E3B100CC39AD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702964A2801E3B100CC39AD /* MainTabView.swift */; };
 		7702964D2801E78100CC39AD /* ProfilePhotoSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702964C2801E78100CC39AD /* ProfilePhotoSelectView.swift */; };
 		770296512802BFE200CC39AD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770296502802BFE200CC39AD /* ProfileView.swift */; };
-		7716791328088C940059711E /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7716791228088C940059711E /* PostDetailViewModel.swift */; };
 		771679152809D25C0059711E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771679142809D25C0059711E /* ProfileViewModel.swift */; };
 		771679172809EEA00059711E /* CurrencyPostRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771679162809EEA00059711E /* CurrencyPostRowView.swift */; };
 		772DE89C280817AC004EF3B3 /* AllPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DE89B280817AC004EF3B3 /* AllPostsViewModel.swift */; };
@@ -35,6 +34,11 @@
 		773A7429280580180054FC30 /* CryptoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7428280580170054FC30 /* CryptoDetailView.swift */; };
 		773A742C280581140054FC30 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 773A742B280581140054FC30 /* SwiftUICharts */; };
 		773C981E28060CB00044497B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C981D28060CB00044497B /* Double.swift */; };
+		773FBE45280B549C00E836AA /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773FBE44280B549C00E836AA /* PageView.swift */; };
+		776671BD280C2F8E006D6A69 /* UserCommentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776671BC280C2F8E006D6A69 /* UserCommentRowView.swift */; };
+		776671BF280C302E006D6A69 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776671BE280C302E006D6A69 /* CommentsView.swift */; };
+		776671C1280C341F006D6A69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776671C0280C341F006D6A69 /* Comment.swift */; };
+		776671C4280C3469006D6A69 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776671C3280C3469006D6A69 /* CommentsViewModel.swift */; };
 		7774746F2801CB8500C994EF /* CryptoCommunityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */; };
 		777474712801CB8500C994EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777474702801CB8500C994EF /* ContentView.swift */; };
 		777474732801CB8600C994EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777474722801CB8600C994EF /* Assets.xcassets */; };
@@ -65,7 +69,6 @@
 		7702964A2801E3B100CC39AD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7702964C2801E78100CC39AD /* ProfilePhotoSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectView.swift; sourceTree = "<group>"; };
 		770296502802BFE200CC39AD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		7716791228088C940059711E /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		771679142809D25C0059711E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		771679162809EEA00059711E /* CurrencyPostRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPostRowView.swift; sourceTree = "<group>"; };
 		772DE89B280817AC004EF3B3 /* AllPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +86,11 @@
 		773A742228049DCA0054FC30 /* AllCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCurrencyViewModel.swift; sourceTree = "<group>"; };
 		773A7428280580170054FC30 /* CryptoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailView.swift; sourceTree = "<group>"; };
 		773C981D28060CB00044497B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		773FBE44280B549C00E836AA /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		776671BC280C2F8E006D6A69 /* UserCommentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommentRowView.swift; sourceTree = "<group>"; };
+		776671BE280C302E006D6A69 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		776671C0280C341F006D6A69 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		776671C3280C3469006D6A69 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 		7774746B2801CB8500C994EF /* CryptoCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCommunityApp.swift; sourceTree = "<group>"; };
 		777474702801CB8500C994EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,7 +137,6 @@
 		772DE8A028083B4B004EF3B3 /* PostDetail */ = {
 			isa = PBXGroup;
 			children = (
-				772DE8A228088A71004EF3B3 /* ViewModel */,
 				772DE8A128083B55004EF3B3 /* View */,
 			);
 			path = PostDetail;
@@ -141,14 +148,6 @@
 				772DE89D28083B1C004EF3B3 /* PostDetailView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		772DE8A228088A71004EF3B3 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7716791228088C940059711E /* PostDetailViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		773A7417280454590054FC30 /* Utils */ = {
@@ -183,6 +182,31 @@
 				77A8911C2806B9D90099270A /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		776671B8280C2759006D6A69 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				776671C2280C3459006D6A69 /* ViewModel */,
+				776671B9280C2F19006D6A69 /* View */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		776671B9280C2F19006D6A69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				776671BE280C302E006D6A69 /* CommentsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		776671C2280C3459006D6A69 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				776671C3280C3469006D6A69 /* CommentsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		777474622801CB8500C994EF = {
@@ -229,6 +253,7 @@
 		7774747C2801CB9900C994EF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				776671B8280C2759006D6A69 /* Comments */,
 				777474832801CBE600C994EF /* Components */,
 				772DE8A028083B4B004EF3B3 /* PostDetail */,
 				773A742728057FFF0054FC30 /* CryptoDetail */,
@@ -239,6 +264,7 @@
 				777474812801CBD400C994EF /* AllCurrency */,
 				777474802801CBCD00C994EF /* Auth */,
 				7774747F2801CBC700C994EF /* MainTab */,
+				773FBE44280B549C00E836AA /* PageView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -261,6 +287,7 @@
 				773A7420280491950054FC30 /* Coin.swift */,
 				77A891252806F8A90099270A /* Post.swift */,
 				77908AE8280ADED400122517 /* LikedCoin.swift */,
+				776671C0280C341F006D6A69 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +338,7 @@
 				7774748F2801D08D00C994EF /* Auth */,
 				773A740228036C830054FC30 /* PostRowView.swift */,
 				771679162809EEA00059711E /* CurrencyPostRowView.swift */,
+				776671BC280C2F8E006D6A69 /* UserCommentRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -572,10 +600,13 @@
 				777474712801CB8500C994EF /* ContentView.swift in Sources */,
 				772DE89C280817AC004EF3B3 /* AllPostsViewModel.swift in Sources */,
 				77A8911D2806B9D90099270A /* String.swift in Sources */,
+				776671BF280C302E006D6A69 /* CommentsView.swift in Sources */,
 				773A7416280453DD0054FC30 /* ImagePicker.swift in Sources */,
 				77786A29280355E800CC9C18 /* TextAreaPost.swift in Sources */,
 				77908AE9280ADED400122517 /* LikedCoin.swift in Sources */,
 				771679172809EEA00059711E /* CurrencyPostRowView.swift in Sources */,
+				773FBE45280B549C00E836AA /* PageView.swift in Sources */,
+				776671BD280C2F8E006D6A69 /* UserCommentRowView.swift in Sources */,
 				7702964D2801E78100CC39AD /* ProfilePhotoSelectView.swift in Sources */,
 				773A742328049DCA0054FC30 /* AllCurrencyViewModel.swift in Sources */,
 				77786A142802D69B00CC9C18 /* CurrencyRowView.swift in Sources */,
@@ -588,6 +619,7 @@
 				773A7429280580180054FC30 /* CryptoDetailView.swift in Sources */,
 				77786A122802D67D00CC9C18 /* AllCurrencyView.swift in Sources */,
 				77786A2528034F6100CC9C18 /* NewPostView.swift in Sources */,
+				776671C1280C341F006D6A69 /* Comment.swift in Sources */,
 				777474912801D09E00C994EF /* TextFieldView.swift in Sources */,
 				77A891262806F8A90099270A /* Post.swift in Sources */,
 				77786A1E28034E7E00CC9C18 /* AllUsersView.swift in Sources */,
@@ -601,8 +633,8 @@
 				7774746F2801CB8500C994EF /* CryptoCommunityApp.swift in Sources */,
 				7774748C2801CC5300C994EF /* LoginView.swift in Sources */,
 				773A741D280460820054FC30 /* User.swift in Sources */,
-				7716791328088C940059711E /* PostDetailViewModel.swift in Sources */,
 				773A740328036C830054FC30 /* PostRowView.swift in Sources */,
+				776671C4280C3469006D6A69 /* CommentsViewModel.swift in Sources */,
 				773A741F28048C2D0054FC30 /* NetworkManager.swift in Sources */,
 				77908AEB280AE04F00122517 /* CryptoDetailViewModel.swift in Sources */,
 				771679152809D25C0059711E /* ProfileViewModel.swift in Sources */,

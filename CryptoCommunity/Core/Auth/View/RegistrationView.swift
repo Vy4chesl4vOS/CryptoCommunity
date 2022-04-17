@@ -35,9 +35,9 @@ struct RegistrationView: View {
                 .font(.system(size: 25))
                 .fontWeight(.bold)
                 .padding(.top, 30)
-            TextFieldView(text: $email, placeHolder: "Example@gmail.com", imageName: "person", imageColor: .yellow)
-            TextFieldView(text: $password, placeHolder: "*************", imageName: "lock", imageColor: .blue)
-            TextFieldView(text: $username, placeHolder: "examplesuser", imageName: "person.text.rectangle", imageColor: .red)
+            TextFieldView(text: $email, placeHolder: "Example@gmail.com", imageName: "person", imageColor: .yellow, secureField: false)
+            TextFieldView(text: $password, placeHolder: "Password", imageName: "lock", imageColor: .blue, secureField: true)
+            TextFieldView(text: $username, placeHolder: "examplesuser", imageName: "person.text.rectangle", imageColor: .red, secureField: false)
             HStack {
                 Spacer()
                 Button {

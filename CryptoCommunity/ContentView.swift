@@ -13,8 +13,13 @@ struct ContentView: View {
     var body: some View {
         Group {
             if viewModel.userSession == nil {
-                LoginView()
-                    .navigationBarHidden(true)
+                if UserDefaults.standard.bool(forKey: "page") {
+                    LoginView()
+                        .navigationBarHidden(true)
+                } else {
+                    PageView()
+                        .navigationBarHidden(true)
+                }
             } else {
                 MainTabView()
                     .navigationBarTitleDisplayMode(.inline)
@@ -24,6 +29,7 @@ struct ContentView: View {
                             if let user = viewModel.currentUser {
                                 NavigationLink {
                                     ProfileView(user: user)
+                                        .navigationBarHidden(true)
 
                                 }
                                      label: {

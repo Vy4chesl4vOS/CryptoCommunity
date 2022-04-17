@@ -11,6 +11,11 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @EnvironmentObject var viewModel: AuthViewModel
+    
+    init () {
+        UserDefaults.standard.set(true, forKey: "page")
+    }
+    
     var body: some View {
             VStack {
                         HeaderView(title1: "CryptoCom", title2: "Welcome.")
@@ -28,8 +33,8 @@ struct LoginView: View {
                 .font(.system(size: 37))
                 .fontWeight(.bold)
                 .padding(.top, 30)
-            TextFieldView(text: $email, placeHolder: "Example@gmail.com", imageName: "person", imageColor: .yellow)
-            TextFieldView(text: $password, placeHolder: "*************", imageName: "lock", imageColor: .blue)
+            TextFieldView(text: $email, placeHolder: "Example@gmail.com", imageName: "person", imageColor: .yellow, secureField: false)
+            TextFieldView(text: $password, placeHolder: "Password", imageName: "lock", imageColor: .blue, secureField: true)
             HStack {
                 Button {
                     //

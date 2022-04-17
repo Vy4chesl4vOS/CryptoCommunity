@@ -12,6 +12,7 @@ struct TextFieldView: View {
     let placeHolder: String
     let imageName: String
     let imageColor: Color
+    let secureField: Bool
     
     var body: some View {
         HStack {
@@ -22,10 +23,17 @@ struct TextFieldView: View {
                 .foregroundColor(.white)
                 .clipShape(Circle())
                 .padding()
-            TextField(placeHolder, text: $text)
-                .frame(width: 270, height: 60)
-                .font(.body)
-                .textInputAutocapitalization(.never)
+            if secureField {
+                SecureField(placeHolder, text: $text)
+                    .frame(width: 270, height: 60)
+                    .font(.body)
+                    .textInputAutocapitalization(.never)
+            } else {
+                TextField(placeHolder, text: $text)
+                    .frame(width: 270, height: 60)
+                    .font(.body)
+                    .textInputAutocapitalization(.never)
+            }
 
         }
         .background(.white)
@@ -36,7 +44,7 @@ struct TextFieldView: View {
 
 struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldView(text: .constant(""), placeHolder: "Example@gmail.com", imageName: "person", imageColor: .yellow)
+        TextFieldView(text: .constant(""), placeHolder: "Example@gmail.com", imageName: "person", imageColor: .yellow, secureField: true)
             .previewDevice("iPhone 13")
     }
 }
