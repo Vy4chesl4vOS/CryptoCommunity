@@ -18,6 +18,7 @@ struct Post: Identifiable, Decodable {
     let coinPrice: String
     let uid: String
     let timestamp: Timestamp
+    let image: String?
     
     var user: User?
 }

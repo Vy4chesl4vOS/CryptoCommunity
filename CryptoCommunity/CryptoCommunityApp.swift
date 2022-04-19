@@ -18,8 +18,10 @@ struct CryptoCommunityApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
+                    .preferredColorScheme(.light)
             }
             .environmentObject(viewModel)
         }
     }
 }
+

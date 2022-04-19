@@ -29,8 +29,8 @@ struct CommentsView: View {
             HStack {
                 Spacer()
                 TextAreaPost(text: $viewModel.text, "Enter comment")
-                    .frame(height: 50)
-                    .padding(10)
+                    .frame(height: 40)
+                    .padding(5)
                     .background(.gray.opacity(0.1))
                     .cornerRadius(30)
                     .multilineTextAlignment(.leading)
@@ -38,8 +38,8 @@ struct CommentsView: View {
                     viewModel.uploadComments()
                 } label: {
                     Image(systemName: "pencil.circle")
-                        .font(.system(size: 45))
-                        .foregroundColor(.yellow)
+                        .font(.system(size: 40))
+                        .foregroundColor(.blue)
                 }
 
             }

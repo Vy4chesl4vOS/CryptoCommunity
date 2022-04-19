@@ -9,8 +9,10 @@ import SwiftUI
 
 struct NewPostView: View {
     @State private var showCryptoPicker = false
-    
+    @State private var showImagePicker = false
     @StateObject var viewModel = NewPostViewModel()
+    
+    @State var image: UIImage? = nil
     @Environment(\.presentationMode) var mod
     
     var body: some View {
@@ -29,6 +31,33 @@ struct NewPostView: View {
                     .font(.body)
                     .fontWeight(.bold)
             }
+            
+            if let image = viewModel.image {
+                Button {
+                    showImagePicker.toggle()
+                } label: {
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: UIScreen.main.bounds.width - 60, height: 150)
+                        .cornerRadius(30)
+                }
+
+            } else {
+                HStack(spacing: 0) {
+                Button  {
+                    showImagePicker.toggle()
+                } label: {
+                    Image(systemName: "photo")
+                        .font(.largeTitle)
+                        .padding()
+                }
+                    Text("(Optional)")
+                        .foregroundColor(.gray)
+                        .font(.caption)
+                }
+
+            }
+            
             TextAreaPost(text: $viewModel.postText, "Enter your text")
                 .overlay (alignment: .bottom){
                     HStack {
@@ -71,6 +100,9 @@ struct NewPostView: View {
             if success {
                 mod.wrappedValue.dismiss()
             }
+        }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(image: $viewModel.image)
         }
         
     }

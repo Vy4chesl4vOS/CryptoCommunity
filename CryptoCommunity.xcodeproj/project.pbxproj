@@ -39,6 +39,7 @@
 		776671BF280C302E006D6A69 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776671BE280C302E006D6A69 /* CommentsView.swift */; };
 		776671C1280C341F006D6A69 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776671C0280C341F006D6A69 /* Comment.swift */; };
 		776671C4280C3469006D6A69 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776671C3280C3469006D6A69 /* CommentsViewModel.swift */; };
+		776ED555280D966900D2C93D /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ED554280D966900D2C93D /* ResetPasswordView.swift */; };
 		7774746F2801CB8500C994EF /* CryptoCommunityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */; };
 		777474712801CB8500C994EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777474702801CB8500C994EF /* ContentView.swift */; };
 		777474732801CB8600C994EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777474722801CB8600C994EF /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		776671BE280C302E006D6A69 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		776671C0280C341F006D6A69 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		776671C3280C3469006D6A69 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		776ED554280D966900D2C93D /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		7774746B2801CB8500C994EF /* CryptoCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCommunityApp.swift; sourceTree = "<group>"; };
 		777474702801CB8500C994EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		776ED553280D965B00D2C93D /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				776ED554280D966900D2C93D /* ResetPasswordView.swift */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		777474622801CB8500C994EF = {
 			isa = PBXGroup;
 			children = (
@@ -228,13 +238,13 @@
 		7774746D2801CB8500C994EF /* CryptoCommunity */ = {
 			isa = PBXGroup;
 			children = (
-				773C981C28060C4E0044497B /* Extensions */,
-				773A7417280454590054FC30 /* Utils */,
 				7774747E2801CBB300C994EF /* Model */,
+				773A7417280454590054FC30 /* Utils */,
 				7774747D2801CB9E00C994EF /* Service */,
 				7774747C2801CB9900C994EF /* Core */,
-				7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */,
+				773C981C28060C4E0044497B /* Extensions */,
 				777474702801CB8500C994EF /* ContentView.swift */,
+				7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */,
 				777474722801CB8600C994EF /* Assets.xcassets */,
 				773A740F280371380054FC30 /* GoogleService-Info.plist */,
 				777474742801CB8600C994EF /* Preview Content */,
@@ -253,15 +263,16 @@
 		7774747C2801CB9900C994EF /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				776671B8280C2759006D6A69 /* Comments */,
 				777474832801CBE600C994EF /* Components */,
+				776ED553280D965B00D2C93D /* ResetPassword */,
+				776671B8280C2759006D6A69 /* Comments */,
 				772DE8A028083B4B004EF3B3 /* PostDetail */,
 				773A742728057FFF0054FC30 /* CryptoDetail */,
 				77786A2A28036BF800CC9C18 /* Posts */,
 				77786A2128034F4400CC9C18 /* NewPost */,
-				77786A1A28034C0300CC9C18 /* FindUsers */,
+				77786A1A28034C0300CC9C18 /* Users */,
 				777474822801CBDD00C994EF /* Profile */,
-				777474812801CBD400C994EF /* AllCurrency */,
+				777474812801CBD400C994EF /* Currencys */,
 				777474802801CBCD00C994EF /* Auth */,
 				7774747F2801CBC700C994EF /* MainTab */,
 				773FBE44280B549C00E836AA /* PageView.swift */,
@@ -309,13 +320,13 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		777474812801CBD400C994EF /* AllCurrency */ = {
+		777474812801CBD400C994EF /* Currencys */ = {
 			isa = PBXGroup;
 			children = (
 				777474872801CBFF00C994EF /* ViewModel */,
 				777474862801CBFC00C994EF /* View */,
 			);
-			path = AllCurrency;
+			path = Currencys;
 			sourceTree = "<group>";
 		};
 		777474822801CBDD00C994EF /* Profile */ = {
@@ -418,13 +429,13 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		77786A1A28034C0300CC9C18 /* FindUsers */ = {
+		77786A1A28034C0300CC9C18 /* Users */ = {
 			isa = PBXGroup;
 			children = (
 				77786A1C28034C1700CC9C18 /* ViewModel */,
 				77786A1B28034C1300CC9C18 /* View */,
 			);
-			path = FindUsers;
+			path = Users;
 			sourceTree = "<group>";
 		};
 		77786A1B28034C1300CC9C18 /* View */ = {
@@ -628,6 +639,7 @@
 				770296492801E03900CC39AD /* RegistrationView.swift in Sources */,
 				77A891222806CBB10099270A /* NewPostViewModel.swift in Sources */,
 				773A740528036E990054FC30 /* AllPostsView.swift in Sources */,
+				776ED555280D966900D2C93D /* ResetPasswordView.swift in Sources */,
 				77A891242806F84F0099270A /* PostService.swift in Sources */,
 				773A7419280458AE0054FC30 /* UploadImage.swift in Sources */,
 				7774746F2801CB8500C994EF /* CryptoCommunityApp.swift in Sources */,
@@ -774,8 +786,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -785,7 +799,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -803,8 +817,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -814,7 +830,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

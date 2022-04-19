@@ -18,7 +18,7 @@ struct AllPostsView: View {
                     ForEach(viewModel.searchPosts) { post in
                         NavigationLink {
                             PostDetailView(post: post)
-                                .navigationBarBackButtonHidden(true)
+                                .navigationBarHidden(true)
                         } label: {
                             PostRowView(post: post)
                         }
@@ -28,9 +28,6 @@ struct AllPostsView: View {
             }
         }
         .background(.gray.opacity(0.1))
-        .onAppear {
-            viewModel.fetchPosts()
-        }
     }
 }
 

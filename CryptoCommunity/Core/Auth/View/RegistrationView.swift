@@ -55,6 +55,11 @@ struct RegistrationView: View {
             }
             .padding(.horizontal, 30)
             .padding(.vertical)
+            Text(viewModel.errorTypeRegister)
+                .font(.caption)
+                .foregroundColor(.red)
+                .padding(10)
+                .shadow(color: .red, radius: 5)
             Spacer()
 
             Button {

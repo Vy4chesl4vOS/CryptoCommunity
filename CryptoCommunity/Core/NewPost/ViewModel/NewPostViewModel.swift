@@ -7,12 +7,14 @@
 
 import Foundation
 import Firebase
+import UIKit
 
 class NewPostViewModel: ObservableObject {
     @Published var coins = [Coin]()
     @Published var pickedCoin: Coin?
     @Published var postText: String = ""
     @Published var didPostUpload = false
+    @Published var image: UIImage?
     
     let postService = PostsService()
     let userService = UserService()
@@ -31,10 +33,20 @@ class NewPostViewModel: ObservableObject {
     func uploadPost() {
         guard let pickedCoin = pickedCoin else { return }
         if !postText.isEmpty && postText.count > 40 {
-            postService.publishPost(coinName: pickedCoin.name, coinImage: pickedCoin.image, coinSymbol: pickedCoin.symbol, coinPrice: pickedCoin.currentPrice.convertCurrency(), text: postText) { complete in
-                self.didPostUpload = true
-                self.updatePostsCount()
-                print("Post uploaded")
+            if let image = image {
+                ImageUpload.uploadImage(image: image) { url in
+                    self.postService.publishPost(image: url ,coinName: pickedCoin.name, coinImage: pickedCoin.image, coinSymbol: pickedCoin.symbol, coinPrice: pickedCoin.currentPrice.convertCurrency(), text: self.postText) { complete in
+                        self.didPostUpload = true
+                        self.updatePostsCount()
+                        print("Post uploaded")
+                    }
+                }
+            } else {
+                postService.publishPost(image: nil ,coinName: pickedCoin.name, coinImage: pickedCoin.image, coinSymbol: pickedCoin.symbol, coinPrice: pickedCoin.currentPrice.convertCurrency(), text: postText) { complete in
+                    self.didPostUpload = true
+                    self.updatePostsCount()
+                    print("Post uploaded")
+                }
             }
         }
     }

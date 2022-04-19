@@ -28,11 +28,13 @@ struct TextFieldView: View {
                     .frame(width: 270, height: 60)
                     .font(.body)
                     .textInputAutocapitalization(.never)
+                    .foregroundColor(.black)
             } else {
                 TextField(placeHolder, text: $text)
                     .frame(width: 270, height: 60)
                     .font(.body)
                     .textInputAutocapitalization(.never)
+                    .foregroundColor(.black)
             }
 
         }

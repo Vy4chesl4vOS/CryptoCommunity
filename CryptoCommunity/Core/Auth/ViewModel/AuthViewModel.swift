@@ -14,6 +14,9 @@ class AuthViewModel : ObservableObject {
     @Published var userEndRegistration = false
     @Published var currentUser: User?
     
+    @Published var errorTypeLogin = ""
+    @Published var errorTypeRegister = ""
+    
     private var showPhotoSelectorSession: FirebaseAuth.User?
     private let userSerive = UserService()
     
@@ -37,6 +40,8 @@ class AuthViewModel : ObservableObject {
             Firebase.Firestore.firestore().collection("users").document(user.uid).setData(data) { error in
                 if let error = error {
                     print("Eror store data \(error.localizedDescription)")
+                    self.errorTypeRegister = error.localizedDescription
+                    return
                 }
                 
                 self.userEndRegistration = true
@@ -48,6 +53,7 @@ class AuthViewModel : ObservableObject {
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("Error login \(error.localizedDescription)")
+                self.errorTypeLogin = error.localizedDescription
                 return
             }
         
@@ -56,6 +62,10 @@ class AuthViewModel : ObservableObject {
             self.userSession = user
             self.fetchUser()
         }
+    }
+    
+    func resetPassword (email: String) {
+        Auth.auth().sendPasswordReset(withEmail: email)
     }
     
     func signOut () {
@@ -82,6 +92,7 @@ class AuthViewModel : ObservableObject {
             self.currentUser = user
         }
     }
+    
     
     
 }

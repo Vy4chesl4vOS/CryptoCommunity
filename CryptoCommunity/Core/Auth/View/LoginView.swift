@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var showForgotPassword = false
     @EnvironmentObject var viewModel: AuthViewModel
     
     init () {
@@ -24,12 +25,15 @@ struct LoginView: View {
                 }
                 .ignoresSafeArea()
             .background(.gray.opacity(0.1))
+            .sheet(isPresented: $showForgotPassword) {
+                ResetPasswordView()
+            }
     }
     
     private var mainView: some View {
         VStack {
             Text("Login")
-                .foregroundColor(.black)
+                .foregroundColor(Color(.label))
                 .font(.system(size: 37))
                 .fontWeight(.bold)
                 .padding(.top, 30)
@@ -37,7 +41,7 @@ struct LoginView: View {
             TextFieldView(text: $password, placeHolder: "Password", imageName: "lock", imageColor: .blue, secureField: true)
             HStack {
                 Button {
-                    //
+                    showForgotPassword.toggle()
                 } label: {
                     Text("Forgot Password?")
                         .font(.caption)
@@ -58,6 +62,11 @@ struct LoginView: View {
             }
             .padding(.horizontal, 30)
             .padding(.vertical)
+            Text(viewModel.errorTypeLogin)
+                .font(.caption)
+                .foregroundColor(.red)
+                .padding(10)
+                .shadow(color: .red, radius: 5)
             Spacer()
 
             NavigationLink {

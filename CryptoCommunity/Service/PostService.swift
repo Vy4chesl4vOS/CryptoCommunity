@@ -12,16 +12,31 @@ struct PostsService {
     let service = UserService()
     var currentUser: User?
     
-    func publishPost(coinName: String, coinImage: String, coinSymbol: String, coinPrice: String, text: String, completion: @escaping(Bool) -> Void) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let data = ["coinName": coinName, "coinImage" : coinImage, "coinSymbol": coinSymbol, "coinPrice": coinPrice, "text": text, "uid": uid, "timestamp": Timestamp(date: Date())] as [String : Any]
-        Firebase.Firestore.firestore().collection("posts").document().setData(data) { error in
-            if let error = error {
-                print("Error upload post \(error)")
-                completion(false)
-                return
+    func publishPost(image: String?, coinName: String, coinImage: String, coinSymbol: String, coinPrice: String, text: String, completion: @escaping(Bool) -> Void) {
+        if let image = image {
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            let data = ["coinName": coinName, "coinImage" : coinImage, "coinSymbol": coinSymbol, "coinPrice": coinPrice, "text": text, "uid": uid, "timestamp": Timestamp(date: Date()), "image" : image] as [String : Any]
+            Firebase.Firestore.firestore().collection("posts").document().setData(data) { error in
+                if let error = error {
+                    print("Error upload post \(error)")
+                    completion(false)
+                    return
+                }
+                completion(true)
             }
-            completion(true)
+
+        } else {
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            let data = ["coinName": coinName, "coinImage" : coinImage, "coinSymbol": coinSymbol, "coinPrice": coinPrice, "text": text, "uid": uid, "timestamp": Timestamp(date: Date())] as [String : Any]
+            Firebase.Firestore.firestore().collection("posts").document().setData(data) { error in
+                if let error = error {
+                    print("Error upload post \(error)")
+                    completion(false)
+                    return
+                }
+                completion(true)
+            }
+
         }
     }
     

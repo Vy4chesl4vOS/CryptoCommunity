@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PostDetailView: View {
     @Environment(\.presentationMode) var mod
@@ -21,6 +22,12 @@ struct PostDetailView: View {
         VStack {
             HeaderView(title1: post.coinName, title2: "@\(post.user?.username ?? "")")
             CurrencyPostRowView(coinImage: post.coinImage, coinSymbol: post.coinSymbol, coinName: post.coinName, coinPrice: post.coinPrice)
+            if let image = post.image {
+                KFImage(URL(string: image))
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width - 60, height: 150)
+                    .cornerRadius(30)
+            }
             ScrollView {
                 Text(post.text)
                     .padding()
@@ -41,6 +48,7 @@ struct PostDetailView: View {
             }
         }
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 

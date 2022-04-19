@@ -6,6 +6,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "6060logo.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -69,6 +70,12 @@
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
+    },
+    {
+      "filename" : "7676logo.png",
+      "idiom" : "ipad",
+      "scale" : "1x",
+      "size" : "76x76"
     },
     {
       "idiom" : "ipad",
@@ -81,6 +88,7 @@
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "Без имени-1.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
