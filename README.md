@@ -1,6 +1,7 @@
 # CryptoCommunity
 # SwiftUI | MVVM | Firebase | JSON (api: https://www.coingecko.com/) | Kingfisher
 
+<img src="https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.31.14.png" width="500">
 ![Currency](https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.31.14.png)
 ![Stat](https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.32.40.png)
 ![Posts](https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.32.51.png)
