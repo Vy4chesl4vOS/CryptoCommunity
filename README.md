@@ -12,4 +12,5 @@
 <img src="https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.33.37.png" width="300">
 <img src="https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.30.41.png" width="300">
 <img src="https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.30.45.png" width="300">
+<img src="https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-21%20at%2014.47.22.png" width="300">
 
