@@ -18,45 +18,8 @@ struct NewPostView: View {
     var body: some View {
         VStack {
             HeaderView(title1: "New post", title2: "Share your thinks with people.")
-            if let coin = viewModel.pickedCoin {
-                Button {
-                    showCryptoPicker.toggle()
-                } label: {
-                    CurrencyRowView(coin: coin, index: Int(coin.marketCapRank ?? 0.0))
-                }
-
-            } else {
-                Text("Check internet connection")
-                    .foregroundColor(.black)
-                    .font(.body)
-                    .fontWeight(.bold)
-            }
             
-            if let image = viewModel.image {
-                Button {
-                    showImagePicker.toggle()
-                } label: {
-                    Image(uiImage: image)
-                        .resizable()
-                        .frame(width: UIScreen.main.bounds.width - 60, height: 150)
-                        .cornerRadius(30)
-                }
-
-            } else {
-                HStack(spacing: 0) {
-                Button  {
-                    showImagePicker.toggle()
-                } label: {
-                    Image(systemName: "photo")
-                        .font(.largeTitle)
-                        .padding()
-                }
-                    Text("(Optional)")
-                        .foregroundColor(.gray)
-                        .font(.caption)
-                }
-
-            }
+            pickCrypto
             
             TextAreaPost(text: $viewModel.postText, "Enter your text")
                 .overlay (alignment: .bottom){
@@ -111,5 +74,52 @@ struct NewPostView: View {
 struct NewPostView_Previews: PreviewProvider {
     static var previews: some View {
         NewPostView()
+    }
+}
+
+
+extension NewPostView {
+    private var pickCrypto : some View {
+        VStack {
+        if let coin = viewModel.pickedCoin {
+            Button {
+                showCryptoPicker.toggle()
+            } label: {
+                CurrencyRowView(coin: coin, index: Int(coin.marketCapRank ?? 0.0))
+            }
+
+        } else {
+            Text("Check internet connection")
+                .foregroundColor(.black)
+                .font(.body)
+                .fontWeight(.bold)
+        }
+        
+        if let image = viewModel.image {
+            Button {
+                showImagePicker.toggle()
+            } label: {
+                Image(uiImage: image)
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width - 60, height: 150)
+                    .cornerRadius(30)
+            }
+
+        } else {
+            HStack(spacing: 0) {
+            Button  {
+                showImagePicker.toggle()
+            } label: {
+                Image(systemName: "photo")
+                    .font(.largeTitle)
+                    .padding()
+            }
+                Text("(Optional)")
+                    .foregroundColor(.gray)
+                    .font(.caption)
+            }
+
+        }
+        }
     }
 }

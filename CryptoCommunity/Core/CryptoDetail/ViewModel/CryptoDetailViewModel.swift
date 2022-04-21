@@ -8,6 +8,7 @@
 import Foundation
 
 class CryptoDetailViewModel: ObservableObject {
+    
     @Published var didCoinLiked = false
     let service = UserService()
     

@@ -11,6 +11,7 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showForgotPassword = false
+    
     @EnvironmentObject var viewModel: AuthViewModel
     
     init () {
@@ -19,17 +20,26 @@ struct LoginView: View {
     
     var body: some View {
             VStack {
-                        HeaderView(title1: "CryptoCom", title2: "Welcome.")
-                        mainView
+                HeaderView(title1: "CryptoCom", title2: "Welcome.")
+                mainView
 
-                }
-                .ignoresSafeArea()
+        }
+            .ignoresSafeArea()
             .background(.gray.opacity(0.1))
             .sheet(isPresented: $showForgotPassword) {
                 ResetPasswordView()
             }
     }
-    
+}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+            .previewDevice("iPhone 13")
+    }
+}
+
+extension LoginView {
     private var mainView: some View {
         VStack {
             Text("Login")
@@ -81,13 +91,5 @@ struct LoginView: View {
 
         }
 
-    }
-    
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-            .previewDevice("iPhone 13")
     }
 }

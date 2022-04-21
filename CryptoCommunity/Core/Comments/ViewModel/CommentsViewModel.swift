@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 class CommentsViewModel : ObservableObject {
+    
     @Published var text = ""
     @Published var comments = [Comment]()
     let post: Post

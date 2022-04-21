@@ -28,6 +28,16 @@ struct RegistrationView: View {
         
     }
     
+}
+
+struct RegistrationView_Previews: PreviewProvider {
+    static var previews: some View {
+        RegistrationView()
+            .previewDevice("iPhone 13")
+    }
+}
+
+extension RegistrationView {
     private var mainView: some View {
         VStack {
             Text("Create a new account")
@@ -74,11 +84,5 @@ struct RegistrationView: View {
         }
 
     }
-}
 
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView()
-            .previewDevice("iPhone 13")
-    }
 }

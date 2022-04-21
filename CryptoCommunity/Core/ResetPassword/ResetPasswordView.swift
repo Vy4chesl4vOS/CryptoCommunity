@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ResetPasswordView: View {
+    
     @EnvironmentObject var viewModel: AuthViewModel
     @State var email: String = ""
+    
     var body: some View {
         VStack {
         HeaderView(title1: "Reset", title2: "Forgot password?")

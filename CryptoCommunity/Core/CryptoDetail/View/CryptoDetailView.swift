@@ -32,47 +32,54 @@ struct CryptoDetailView: View {
             }
             LineView(data: coin.sparklineIn7D?.price ?? [], style: chartsStyle)
                     .padding(.horizontal, 15)
-            ZStack(alignment: .topLeading) {
-                Color.white
-                    .clipShape(RoundedShapeTop())
-                    .shadow(color: .gray, radius: 5)
-                .ignoresSafeArea()
-                VStack {
-                    Text("Market statistic")
-                        .foregroundColor(.black)
-                        .fontWeight(.bold)
-                        .font(.title2)
-                        .padding(.top, 20)
-                        .shadow(color: .gray.opacity(0.3), radius: 3)
-                    Divider()
-                        .padding()
-                    ScrollView {
-                        LazyVStack(spacing: 20) {
-                            infoString(titleText: "Market capitalization", infoText: "\((coin.marketCap ?? 0.0).convertCurrency())", color: .black)
-                            
-                            infoString(titleText: "Hight 24H", infoText: "\((coin.high24H ?? 0.0).convertCurrency())", color: .black)
-                            
-                            infoString(titleText: "Low 24H", infoText: "\((coin.low24H ?? 0.0).convertCurrency())", color: .black)
-                            
-                            infoString(titleText: "Change 24H", infoText: "\((coin.priceChange24H ?? 0.0).convertCurrency())", color: String(coin.priceChange24H ?? 0.0).contains("-") ? .red : .green)
-                            
-                            Button {
-                                viewModel.didCoinLiked ? viewModel.unlikeCoin(coinSymbol: coin.symbol) : viewModel.likeCoin(coinName: coin.name, coinSymbol: coin.symbol, coinImage: coin.image)
-                            } label: {
-                                Image(systemName: "suit.heart.fill")
-                                    .font(.largeTitle)
-                                    .foregroundColor(viewModel.didCoinLiked ? .red : .gray)
-                            }
-
-                        }
-                    }
-                }
-
-            }
+            marketStatistic
+            
         }
         .background(.gray.opacity(0.1))
         .navigationTitle("\(coin.name)(\(coin.symbol.uppercased()))")
 
+    }
+}
+
+extension CryptoDetailView {
+    private var marketStatistic : some View {
+        ZStack(alignment: .topLeading) {
+            Color.white
+                .clipShape(RoundedShapeTop())
+                .shadow(color: .gray, radius: 5)
+            .ignoresSafeArea()
+            VStack {
+                Text("Market statistic")
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                    .font(.title2)
+                    .padding(.top, 20)
+                    .shadow(color: .gray.opacity(0.3), radius: 3)
+                Divider()
+                    .padding()
+                ScrollView {
+                    LazyVStack(spacing: 20) {
+                        infoString(titleText: "Market capitalization", infoText: "\((coin.marketCap ?? 0.0).convertCurrency())", color: .black)
+                        
+                        infoString(titleText: "Hight 24H", infoText: "\((coin.high24H ?? 0.0).convertCurrency())", color: .black)
+                        
+                        infoString(titleText: "Low 24H", infoText: "\((coin.low24H ?? 0.0).convertCurrency())", color: .black)
+                        
+                        infoString(titleText: "Change 24H", infoText: "\((coin.priceChange24H ?? 0.0).convertCurrency())", color: String(coin.priceChange24H ?? 0.0).contains("-") ? .red : .green)
+                        
+                        Button {
+                            viewModel.didCoinLiked ? viewModel.unlikeCoin(coinSymbol: coin.symbol) : viewModel.likeCoin(coinName: coin.name, coinSymbol: coin.symbol, coinImage: coin.image)
+                        } label: {
+                            Image(systemName: "suit.heart.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(viewModel.didCoinLiked ? .red : .gray)
+                        }
+
+                    }
+                }
+            }
+
+        }
     }
 }
 

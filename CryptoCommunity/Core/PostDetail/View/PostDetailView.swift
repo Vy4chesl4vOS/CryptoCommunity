@@ -10,18 +10,27 @@ import Kingfisher
 
 struct PostDetailView: View {
     @Environment(\.presentationMode) var mod
-//    @ObservedObject var viewModel: PostDetailViewModel
+    
     let post: Post
     
     init (post: Post) {
         self.post = post
-//        self.viewModel = PostDetailViewModel(coinName: post.coin)
     }
     
     var body: some View {
         VStack {
             HeaderView(title1: post.coinName, title2: "@\(post.user?.username ?? "")")
             CurrencyPostRowView(coinImage: post.coinImage, coinSymbol: post.coinSymbol, coinName: post.coinName, coinPrice: post.coinPrice)
+            mainInterface
+        }
+        .ignoresSafeArea()
+        .navigationBarHidden(true)
+    }
+}
+
+extension PostDetailView {
+    private var mainInterface : some View {
+        VStack {
             if let image = post.image {
                 KFImage(URL(string: image))
                     .resizable()
@@ -47,8 +56,8 @@ struct PostDetailView: View {
                 .padding(.bottom, 30)
             }
         }
-        .ignoresSafeArea()
-        .navigationBarHidden(true)
     }
 }
+
+
 

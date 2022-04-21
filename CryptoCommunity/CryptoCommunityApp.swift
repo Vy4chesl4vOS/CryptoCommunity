@@ -10,7 +10,9 @@ import Firebase
 
 @main
 struct CryptoCommunityApp: App {
+    
     @StateObject var viewModel = AuthViewModel()
+    
     init () {
         FirebaseApp.configure()
     }

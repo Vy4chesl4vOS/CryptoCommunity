@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ProfileView: View {
     @State private var likedChoose = true
+    
     @ObservedObject var viewModel: ProfileViewModel
     @Environment(\.presentationMode) var mod
     
@@ -21,65 +22,11 @@ struct ProfileView: View {
     }
     
     var body: some View {
+        
         VStack {
            headerView
-            VStack {
-                HStack(spacing: 20) {
-                    Button {
-                            self.likedChoose = true
-                    } label: {
-                        Text("Liked")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .frame(width: 150)
-                            .padding(.vertical, 10)
-                            .background(likedChoose ? .blue : .gray)
-                            .clipShape(Capsule())
-                    }
-                    Button {
-                            self.likedChoose = false
-                        
-                    } label: {
-                        Text("Posts")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .frame(width: 150)
-                            .padding(.vertical, 10)
-                            .background(likedChoose ? .gray : .blue)
-                            .clipShape(Capsule())
-                    }
-
-                }
-                .padding([.bottom, .horizontal])
-                
-                       
-            }
-            
-            if likedChoose {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(viewModel.likedCoins) { coin in
-                            CurrencyPostRowView(coinImage: coin.coinImage, coinSymbol: coin.coinSymbol, coinName: coin.coinName, coinPrice: nil)
-                        }
-                    }
-                    Spacer()
-                }
-            } else {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(viewModel.userPosts) { post in
-                            NavigationLink {
-                                PostDetailView(post: post)
-                            } label: {
-                                PostRowView(post: post)
-                            }
-
-                        }
-                    }
-                    Spacer()
-                }
-            }
-            
+           buttons
+            mainScroll
         }
         .ignoresSafeArea()
         .background(.gray.opacity(0.2))
@@ -96,6 +43,44 @@ struct ProfileView: View {
             }
             .padding(.bottom, 10)
         }
+    }
+    
+}
+
+extension ProfileView {
+    private var buttons : some View {
+        VStack {
+            HStack(spacing: 20) {
+                Button {
+                        self.likedChoose = true
+                } label: {
+                    Text("Liked")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .frame(width: 150)
+                        .padding(.vertical, 10)
+                        .background(likedChoose ? .blue : .gray)
+                        .clipShape(Capsule())
+                }
+                Button {
+                        self.likedChoose = false
+                    
+                } label: {
+                    Text("Posts")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .frame(width: 150)
+                        .padding(.vertical, 10)
+                        .background(likedChoose ? .gray : .blue)
+                        .clipShape(Capsule())
+                }
+
+            }
+            .padding([.bottom, .horizontal])
+            
+                   
+        }
+
     }
     
     private var headerView : some View {
@@ -130,6 +115,35 @@ struct ProfileView: View {
                 }
         }
 
+    }
+    
+    private var mainScroll : some View {
+        HStack {
+        if likedChoose {
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.likedCoins) { coin in
+                        CurrencyPostRowView(coinImage: coin.coinImage, coinSymbol: coin.coinSymbol, coinName: coin.coinName, coinPrice: nil)
+                    }
+                }
+                Spacer()
+            }
+        } else {
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.userPosts) { post in
+                        NavigationLink {
+                            PostDetailView(post: post)
+                        } label: {
+                            PostRowView(post: post)
+                        }
+
+                    }
+                }
+                Spacer()
+            }
+        }
+    }
     }
 }
 

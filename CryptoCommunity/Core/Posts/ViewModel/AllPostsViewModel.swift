@@ -9,6 +9,7 @@ import Foundation
 
 
 class AllPostsViewModel : ObservableObject {
+    
     @Published var posts = [Post]()
     @Published var searchText = ""
     

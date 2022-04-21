@@ -345,8 +345,9 @@
 				77786A132802D69B00CC9C18 /* CurrencyRowView.swift */,
 				77786A152802D9EC00CC9C18 /* FindSearchBarView.swift */,
 				77786A28280355E800CC9C18 /* TextAreaPost.swift */,
-				77786A1728034A8F00CC9C18 /* User */,
-				7774748F2801D08D00C994EF /* Auth */,
+				77786A1828034AA900CC9C18 /* UserRowView.swift */,
+				7774748D2801CC7B00C994EF /* RoundedShape.swift */,
+				777474902801D09E00C994EF /* TextFieldView.swift */,
 				773A740228036C830054FC30 /* PostRowView.swift */,
 				771679162809EEA00059711E /* CurrencyPostRowView.swift */,
 				776671BC280C2F8E006D6A69 /* UserCommentRowView.swift */,
@@ -410,23 +411,6 @@
 				7702964A2801E3B100CC39AD /* MainTabView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		7774748F2801D08D00C994EF /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				7774748D2801CC7B00C994EF /* RoundedShape.swift */,
-				777474902801D09E00C994EF /* TextFieldView.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		77786A1728034A8F00CC9C18 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				77786A1828034AA900CC9C18 /* UserRowView.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		77786A1A28034C0300CC9C18 /* Users */ = {
