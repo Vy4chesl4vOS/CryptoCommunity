@@ -26,7 +26,7 @@ class AuthViewModel : ObservableObject {
     }
     
     func registerUser(email: String, password: String, username: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, password: password) {[weak self] result, error in
             if let error = error {
                 print("Error register \(error.localizedDescription)")
                 return
@@ -34,33 +34,33 @@ class AuthViewModel : ObservableObject {
             
             print("Register done")
             guard let user = result?.user else { return }
-            self.showPhotoSelectorSession = user
+            self?.showPhotoSelectorSession = user
             
             let data = ["email" : email, "username": username.lowercased(), "uid": user.uid, "posts": 0] as [String: Any]
             Firebase.Firestore.firestore().collection("users").document(user.uid).setData(data) { error in
                 if let error = error {
                     print("Eror store data \(error.localizedDescription)")
-                    self.errorTypeRegister = error.localizedDescription
+                    self?.errorTypeRegister = error.localizedDescription
                     return
                 }
                 
-                self.userEndRegistration = true
+                self?.userEndRegistration = true
             }
         }
     }
     
     func loginUser(email: String, password: String) {
-            Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
             if let error = error {
                 print("Error login \(error.localizedDescription)")
-                self.errorTypeLogin = error.localizedDescription
+                self?.errorTypeLogin = error.localizedDescription
                 return
             }
         
             print("Login done")
             guard let user = result?.user else { return }
-            self.userSession = user
-            self.fetchUser()
+            self?.userSession = user
+            self?.fetchUser()
         }
     }
     
@@ -77,10 +77,10 @@ class AuthViewModel : ObservableObject {
         guard let uid = showPhotoSelectorSession?.uid else { return }
         
         ImageUpload.uploadImage(image: image) { url in
-            Firebase.Firestore.firestore().collection("users").document(uid).updateData(["imageUrl" : url]) { _ in
-                self.userSession = self.showPhotoSelectorSession
-                self.fetchUser()
-                self.userEndRegistration = false
+            Firebase.Firestore.firestore().collection("users").document(uid).updateData(["imageUrl" : url]) {[weak self] _ in
+                self?.userSession = self?.showPhotoSelectorSession
+                self?.fetchUser()
+                self?.userEndRegistration = false
             }
         }
         
@@ -88,8 +88,8 @@ class AuthViewModel : ObservableObject {
     
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
-        userSerive.fetchUser(with: uid) { user in
-            self.currentUser = user
+        userSerive.fetchUser(with: uid) {[weak self] user in
+            self?.currentUser = user
         }
     }
     

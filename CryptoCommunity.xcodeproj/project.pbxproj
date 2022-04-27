@@ -21,7 +21,6 @@
 		773A740A28036FF90054FC30 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740928036FF90054FC30 /* FirebaseFirestore */; };
 		773A740C28036FF90054FC30 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740B28036FF90054FC30 /* FirebaseFirestoreSwift-Beta */; };
 		773A740E28036FF90054FC30 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 773A740D28036FF90054FC30 /* FirebaseStorage */; };
-		773A7410280371380054FC30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 773A740F280371380054FC30 /* GoogleService-Info.plist */; };
 		773A7412280371680054FC30 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7411280371680054FC30 /* AuthViewModel.swift */; };
 		773A7416280453DD0054FC30 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7415280453DD0054FC30 /* ImagePicker.swift */; };
 		773A7419280458AE0054FC30 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A7418280458AE0054FC30 /* UploadImage.swift */; };
@@ -55,6 +54,7 @@
 		77786A1E28034E7E00CC9C18 /* AllUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A1D28034E7E00CC9C18 /* AllUsersView.swift */; };
 		77786A2528034F6100CC9C18 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A2428034F6100CC9C18 /* NewPostView.swift */; };
 		77786A29280355E800CC9C18 /* TextAreaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77786A28280355E800CC9C18 /* TextAreaPost.swift */; };
+		777F988F2819D33000F8A1E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 777F988E2819D33000F8A1E6 /* GoogleService-Info.plist */; };
 		77908AE9280ADED400122517 /* LikedCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77908AE8280ADED400122517 /* LikedCoin.swift */; };
 		77908AEB280AE04F00122517 /* CryptoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77908AEA280AE04F00122517 /* CryptoDetailViewModel.swift */; };
 		77A8911B2806168A0099270A /* AllUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A8911A2806168A0099270A /* AllUsersViewModel.swift */; };
@@ -76,7 +76,6 @@
 		772DE89D28083B1C004EF3B3 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		773A740228036C830054FC30 /* PostRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowView.swift; sourceTree = "<group>"; };
 		773A740428036E990054FC30 /* AllPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsView.swift; sourceTree = "<group>"; };
-		773A740F280371380054FC30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		773A7411280371680054FC30 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		773A7415280453DD0054FC30 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		773A7418280458AE0054FC30 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		77786A1D28034E7E00CC9C18 /* AllUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersView.swift; sourceTree = "<group>"; };
 		77786A2428034F6100CC9C18 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		77786A28280355E800CC9C18 /* TextAreaPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAreaPost.swift; sourceTree = "<group>"; };
+		777F988E2819D33000F8A1E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77908AE8280ADED400122517 /* LikedCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCoin.swift; sourceTree = "<group>"; };
 		77908AEA280AE04F00122517 /* CryptoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewModel.swift; sourceTree = "<group>"; };
 		77A8911A2806168A0099270A /* AllUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersViewModel.swift; sourceTree = "<group>"; };
@@ -245,8 +245,8 @@
 				773C981C28060C4E0044497B /* Extensions */,
 				777474702801CB8500C994EF /* ContentView.swift */,
 				7774746E2801CB8500C994EF /* CryptoCommunityApp.swift */,
+				777F988E2819D33000F8A1E6 /* GoogleService-Info.plist */,
 				777474722801CB8600C994EF /* Assets.xcassets */,
-				773A740F280371380054FC30 /* GoogleService-Info.plist */,
 				777474742801CB8600C994EF /* Preview Content */,
 			);
 			path = CryptoCommunity;
@@ -578,7 +578,7 @@
 			files = (
 				777474762801CB8600C994EF /* Preview Assets.xcassets in Resources */,
 				777474732801CB8600C994EF /* Assets.xcassets in Resources */,
-				773A7410280371380054FC30 /* GoogleService-Info.plist in Resources */,
+				777F988F2819D33000F8A1E6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

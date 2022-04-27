@@ -24,19 +24,19 @@ class ProfileViewModel : ObservableObject {
     
     func fetchUserPosts () {
         guard let uid  = user.id else { return }
-        self.service.fetchUserPosts(uid: uid) { posts in
-            self.userPosts = posts
+        self.service.fetchUserPosts(uid: uid) {[weak self] posts in
+            self?.userPosts = posts
             
             for i in 0..<posts.count {
-                self.userPosts[i].user = self.user
+                self?.userPosts[i].user = self?.user
             }
         }
     }
     
     func fetchLikedCoins () {
         guard let uid = user.id else { return }
-        userService.fetchCoinLikes(uid: uid) { coins in
-            self.likedCoins = coins
+        userService.fetchCoinLikes(uid: uid) { [weak self] coins in
+            self?.likedCoins = coins
         }
     }
     

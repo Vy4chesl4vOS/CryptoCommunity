@@ -29,8 +29,8 @@ class AllCurrencyViewModel : ObservableObject {
     }
     
     func fetchCrypto () {
-        NetworkManager.shared.fetchCrypto { coins in
-            self.coins = coins
+        NetworkManager.shared.fetchCrypto {[weak self] coins in
+            self?.coins = coins
         }
     }
 }

@@ -35,14 +35,14 @@ class CommentsViewModel : ObservableObject {
     }
     
     func fetchComments () {
-        postService.fetchComments(post: post) { comments in
-            self.comments = comments
+        postService.fetchComments(post: post) {[weak self] comments in
+            self?.comments = comments
             
             for i in 0..<comments.count {
                 let uid = comments[i].uid
                 
-                self.userService.fetchUser(with: uid) { user in
-                    self.comments[i].user = user
+                self?.userService.fetchUser(with: uid) { user in
+                    self?.comments[i].user = user
                 }
             }
         }

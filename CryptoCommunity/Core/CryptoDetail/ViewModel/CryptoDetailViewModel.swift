@@ -17,23 +17,23 @@ class CryptoDetailViewModel: ObservableObject {
     }
     
     func likeCoin (coinName: String, coinSymbol: String, coinImage: String) {
-        service.likeCrypto(coinName: coinName, coinSymbol: coinSymbol, coinImage: coinImage) {
-            self.didCoinLiked = true
+        service.likeCrypto(coinName: coinName, coinSymbol: coinSymbol, coinImage: coinImage) { [weak self] in
+            self?.didCoinLiked = true
         }
     }
     
     func unlikeCoin (coinSymbol: String) {
-        service.unlikeCrypto(coinSymbol: coinSymbol) {
-            self.didCoinLiked = false
+        service.unlikeCrypto(coinSymbol: coinSymbol) { [weak self] in
+            self?.didCoinLiked = false
         }
     }
     
     func checkIsCoinLike (coinSymbol: String) {
-        service.checkIfCryptoLiked(coinSymbol: coinSymbol) { didLike in
+        service.checkIfCryptoLiked(coinSymbol: coinSymbol) {[weak self] didLike in
             if didLike{
-                self.didCoinLiked = true
+                self?.didCoinLiked = true
             } else {
-                self.didCoinLiked = false
+                self?.didCoinLiked = false
             }
         }
     }

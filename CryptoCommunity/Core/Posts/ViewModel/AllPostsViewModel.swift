@@ -34,14 +34,14 @@ class AllPostsViewModel : ObservableObject {
     }
     
     func fetchPosts () {
-        service.fetchPosts { posts in
-            self.posts = posts
+        service.fetchPosts {[weak self] posts in
+            self?.posts = posts
             
             for i in 0..<posts.count {
                 let uid = posts[i].uid
                 
-                self.userService.fetchUser(with: uid) { user in
-                    self.posts[i].user = user
+                self?.userService.fetchUser(with: uid) { user in
+                    self?.posts[i].user = user
                 }
             }
         }
