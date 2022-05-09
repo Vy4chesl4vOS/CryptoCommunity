@@ -1,5 +1,5 @@
 # CryptoCommunity
-# SwiftUI | MVVM | Firebase | JSON | Kingfisher
+# SwiftUI | MVVM | Firebase | JSON | Kingfisher | ChartView
 ## API : https://www.coingecko.com/
 
 <img src="https://raw.githubusercontent.com/Vy4chesl4vOS/CryptoCommunity/main/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202022-04-19%20at%2016.31.14.png" width="300">
